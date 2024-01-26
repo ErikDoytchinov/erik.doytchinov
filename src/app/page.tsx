@@ -1,112 +1,92 @@
-import Image from "next/image";
+import * as React from 'react';
+import Link from 'next/link'
+import Image from 'next/image'
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+export default function MyApp() {
+  return ( 
+    <main>
+      <aside className="fixed top-0 left-0 z-40 w-2/12 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-slate-800" aria-label="Sidebar">
+        <div className="ml-4">
+          <h1 className="text-left text-2xl pt-7 pb-5 text-white">Erik Doytchinov</h1>
+          <Image
+            src="https://media.licdn.com/dms/image/D4E03AQGKkYD_g2UwYw/profile-displayphoto-shrink_400_400/0/1705500073136?e=1711584000&v=beta&t=l0s2w2bk2FBvtujnbcQ4_4fRx9Rcd5L8n-SfAdQCJlA"
+            width={200}
+            height={200}
+            alt="Picture of the author"
+            className="rounded-md mb-4 ml-2"
+          />
+          <div className="mt-7">
+            <Link href="https://github.com/ErikDoytchinov" className="text-2xl text-slate-400">GitHub</Link>
+            {/* <Link href="https://github.com/ErikDoytchinov" className="text-2xl text-slate-400">GitHub</Link> */}
+          </div>
+
+          <p className="text-white text-left mt-6">CONTACT</p>
+          <p className="text-white text-left">erik.doytchinov@gmail.com</p>
+          <p className="text-white text-left">+31 6 84 05 49 44</p>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      </aside>
+      <div className="fixed top-0 right-0 z-40 w-10/12 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-neutral-900">
+        <h1 className="text-2xl ml-6 pt-7 text-white">About Me</h1>
+        <p className="top-10 ml-6 pt-5 left-3 text-white bg-gradient-to-tr:bg-slate-300 text-sm">
+          Currently persuing my Bachelor&apos;s in Computer Science (<Link href="https://vu.nl/en/education/bachelor/computer-science" className="text-slate-400">VU Amsterdam</Link>).
+          I&apos;m interested in everything tech related, with a focus on software engineering and big data. Here I include all project I&apos;ve tinkered with
+          throughout the years, RaspberryPi and others. I&apos;m also into video games, and 
+        </p>
+        <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+        <h1 className="text-2xl ml-6 pt-1 left-3 text-white">Experiences</h1>
+        <p className="ml-6 pt-5 left-3 text-white bg-gradient-to-tr:bg-slate-300">
+          [<Link href="/resume.pdf" locale={false} className="text-slate-400">CV</Link>] / 
+          [<Link href="https://www.linkedin.com/in/erik-doytchinov-6a8ba8251/" className="text-slate-400">LinkedIn</Link>]
+        </p>
+        <ul className="text-white list-inside ml-3 pt-2">
+            <li className="list-item pt-1 pl-3">
+                <div className="inline text-xs">
+                    <p className="">Software Engineer Intern</p>
+                    <p className="text-sm"><Link href="https://www.dvbcontrol.com/" className="text-slate-400">DVBControl</Link> · Internship</p>
+                    <p className="text-xs">Aug 2023 - Oct 2023 · 3 mos</p>
+                    <ul className="pl-4 pt-1">
+                        <li>•Collaborated with the development team to create a web portal for DVB Control&apos;s broadcasting monitoring tool.</li>
+                        <li>•Utilized the Angular framework to design and implement user-friendly web applications.</li>
+                        <li>•Assisted in the analysis of databases to enhance data storage and retrieval efficiency.</li>
+                        <li>•Assisted in implementing security measures to safeguard sensitive data and protect against potential vulnerabilities.</li>
+                        <li>•Assisted in resolving technical challenges, ensuring the project met performance and security standards.</li>
+                    </ul>
+                </div>
+            </li>
+            <li className="list-item pt-1 pl-3">
+                <div className="inline text-xs">
+                    <p className="">Service Associate</p>
+                    <p className="text-sm">SUGO Pizza al Taglio · Part-time</p>
+                    <p className="text-xs">Jan 2023 - Present · 1 yr 1 mo</p>
+                    <ul className="pl-4 pt-1">
+                        <li>• Expertly prepared and cooked a wide range of Italian-style pizzas to perfection, ensuring consistency in taste and presentation.</li>
+                        <li>• Maintained a clean and organized kitchen, adhering to food safety and hygiene standards. Demonstrated proficiency in working with pizza ovens and other kitchen equipment.</li>
+                        <li>• Coordinated and supervised fellow staff members during shifts, ensuring smooth restaurant operations.</li>
+                        <li>• Fostered a collaborative and positive work environment, promoting teamwork and staff morale</li>
+                    </ul>
+                </div>
+            </li>   
+            <li className="list-item pt-1 pl-3">
+                <div className="inline text-xs">
+                    <p className="">Customer Service Assistant</p>
+                    <p className="text-sm">Jack Astor&apos;s Bar and Grill · Part-time</p>
+                    <p className="text-xs">Feb 2022 - Sep 2022 · 8 mos</p>
+                    <ul className="pl-4 pt-1">
+                        <li>• Skilled in delivering outstanding service by greeting and serving customers.</li>
+                        <li>• Strong customer service attitude, self-reliant, dependable, able to prioritize, and multitask.</li>
+                        <li>• Experience working as a leader and able to work well with others to accomplish a goal.</li>
+                        <li>• Experienced with handling of high volume of customers.</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+        <h1 className="text-2xl ml-6 pt-1 left-3 text-white">Projects</h1>
+        <p className="ml-6 pt-5 left-3 text-white bg-gradient-to-tr:bg-slate-300 text-sm">Some projects I&apos;ve worked on throughout the years listed bellow</p>
+        <ul className="text-white list-inside ml-3 pt-2">
+          <li className="list-item pt-1 pl-3"><Link href="https://github.com/ErikDoytchinov/Soluna" className="text-slate-400">Soluna</Link> - Web based weather application built with Angular framework and ran on a NodeJs servers</li>
+          <li className="list-item pt-1 pl-3"></li>
+        </ul>
       </div>
     </main>
   );
