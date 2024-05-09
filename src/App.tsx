@@ -54,22 +54,8 @@ function App() {
                     ). I&apos;m interested in everything tech related, with a
                     focus on software engineering and big data. Here I include
                     all project I&apos;ve tinkered with throughout the years,
-                    RaspberryPi and others. I&apos;m also into video games,
-                    I&apos;m currently playing{" "}
-                    <a
-                        href="https://www.ea.com/games/apex-legends"
-                        className="text-slate-400"
-                    >
-                        Apex Legends
-                    </a>{" "}
-                    and{" "}
-                    <a
-                        href="https://www.ea.com/games/battlefield/battlefield-2042"
-                        className="text-slate-400"
-                    >
-                        Battlefield 2042
-                    </a>
-                    .
+                    RaspberryPi and others. I&apos;m always looking for new
+                    opportunities to learn and grow as a software engineer.
                 </p>
                 <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
                 <h1 className="text-2xl ml-6 pt-1 left-3 text-white">
@@ -90,6 +76,60 @@ function App() {
                     ]
                 </p>
                 <ul className="text-white list-inside ml-3 pt-2">
+                    <li className="list-item pt-1 pl-3">
+                        <div className="inline text-xs">
+                            <p className="text-base">
+                                Software Engineer Intern
+                            </p>
+                            <p className="text-sm">
+                                <a
+                                    href="https://www.zivver.com/"
+                                    className="text-slate-400"
+                                >
+                                    Zivver
+                                </a>{" "}
+                                · Internship
+                            </p>
+                            <p className="text-xs">
+                                Mar 2024 - Present ·{" "}
+                                {calculateTimeBetweenTwoStringDates(
+                                    "2024-03-01"
+                                )}
+                            </p>
+                            <ul className="pl-4 pt-1">
+                                <li>
+                                    • Led the performance optimization of key
+                                    software systems, focusing on enhancing both
+                                    frontend and backend functionalities to
+                                    boost overall efficiency.
+                                </li>
+                                <li>
+                                    • Directed the design and implementation of
+                                    user interface improvements, significantly
+                                    elevating user experience across software
+                                    platforms.
+                                </li>
+                                <li>
+                                    • Engineered and implemented scripts and
+                                    tools for real-time performance evaluation
+                                    of critical operational rules in production
+                                    environments.
+                                </li>
+                                <li>
+                                    • Developed an internal analytical tool to
+                                    monitor and analyze trigger events based on
+                                    input data, enhancing strategic operational
+                                    insights.
+                                </li>
+                                <li>
+                                    • Collaborated with cross-functional team
+                                    members to ensure seamless integration of
+                                    performance improvements into existing
+                                    systems.
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                     <li className="list-item pt-1 pl-3">
                         <div className="inline text-xs">
                             <p className="text-base">
