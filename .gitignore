@@ -14,7 +14,8 @@
 /out/
 
 # production
-/dist
+dist
+dist/assets
 
 # misc
 .DS_Store

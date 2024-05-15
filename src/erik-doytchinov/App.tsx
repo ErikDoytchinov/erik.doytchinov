@@ -1,5 +1,5 @@
 import "./App.css";
-import Portfolio from "./portfolio/Portfolio.tsx";
+import Portfolio from "../portfolio/Portfolio.tsx";
 
 function App() {
     return (
