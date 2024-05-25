@@ -18,7 +18,7 @@ function calculateTimeBetweenTwoStringDates(date1: string) {
 
 function Portfolio() {
     return (
-        <div className="flex-1 overflow-y-auto p-4 bg-neutral-900">
+        <div className="flex-1 overflow-y-auto p-4 md:mt-0 md:ml-64 bg-neutral-900">
             <h1 className="text-2xl ml-6 pt-3 text-white">About Me</h1>
             <p className="top-10 ml-6 pt-5 left-3 text-white bdg-gradient-to-tr:bg-slate-300 text-sm">
                 Currently persuing my Bachelor&apos;s in Computer Science (
