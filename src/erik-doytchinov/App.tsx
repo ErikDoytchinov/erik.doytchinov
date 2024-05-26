@@ -38,22 +38,17 @@ function App() {
                             />
                         </a>
                         <a
-                            href="https://www.linkedin.com/in/erik-doytchinov/"
+                            href="mailto:erik.doytchinov@gmail.com"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <img
-                                src="https://cdn1.iconfinder.com/data/icons/social-media-outline-6/128/SocialMedia_LinkedIn-Outline-512.png"
+                                src="https://cdn3.iconfinder.com/data/icons/essential-pack-2/48/8-Email-512.png"
                                 alt="linkedin"
                                 className="w-8 h-8 mx-2 brightness-0 invert"
                             />
                         </a>
                     </div>
-
-                    <p className="text-white text-left mt-6">CONTACT</p>
-                    <p className="text-white text-left">
-                        erik.doytchinov@gmail.com
-                    </p>
                 </aside>
                 <Portfolio />
             </div>
