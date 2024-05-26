@@ -18,7 +18,7 @@ function calculateTimeBetweenTwoStringDates(date1: string) {
 
 function Portfolio() {
     return (
-        <div className="flex-1 overflow-y-auto p-4 md:mt-0 md:ml-64 bg-neutral-900">
+        <div className="flex-1 md:overflow-y-auto p-4 md:mt-0 md:ml-64 bg-neutral-900">
             <h1 className="text-2xl ml-6 pt-3 text-white">About Me</h1>
             <p className="top-10 ml-6 pt-5 left-3 text-white bdg-gradient-to-tr:bg-slate-300 text-sm">
                 Currently persuing my Bachelor&apos;s in Computer Science (
@@ -30,9 +30,9 @@ function Portfolio() {
                 </a>
                 ). I&apos;m interested in everything tech related, with a focus
                 on software engineering and big data. Here I include all project
-                I&apos;ve tinkered with throughout the years, RaspberryPi and
-                others. I&apos;m always looking for new opportunities to learn
-                and grow as a software engineer.
+                I&apos;ve tinkered with throughout the years, and others.
+                I&apos;m always looking for new opportunities to learn and grow
+                as a software engineer.
             </p>
             <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
             <h1 className="text-2xl ml-6 pt-1 left-3 text-white">
@@ -273,8 +273,29 @@ function Portfolio() {
                     >
                         Soluna
                     </a>
-                    - Web based weather application built with Angular framework
-                    and ran on a NodeJs servers
+                    <p>
+                        - Web based weather application built with Angular
+                        framework and ran on a NodeJs servers. Utilizes the
+                        OpenWeatherMap API to fetch weather data. Features
+                        include: 5-day forecast, current weather, and a search
+                        bar.
+                    </p>
+                </li>
+                <li className="list-item pt-1 pl-3"></li>
+            </ul>
+            <ul className="text-white list-inside ml-3 pt-2">
+                <li className="list-item pt-1 pl-3">
+                    <a
+                        href="https://github.com/ErikDoytchinov/flavor-craft"
+                        className="text-slate-400"
+                    >
+                        FlavorCraft
+                    </a>
+                    <p>
+                        - A minecraft modpack that adds a variety of new foods
+                        and recipes to the game. Built with the forge modding
+                        framework. Currently in development.
+                    </p>
                 </li>
                 <li className="list-item pt-1 pl-3"></li>
             </ul>
