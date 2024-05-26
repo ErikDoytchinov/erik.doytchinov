@@ -6,7 +6,7 @@ function App() {
         <>
             <div className="h-screen flex flex-col md:flex-row overflow-y-scroll">
                 <aside className="md:w-64 w-full p-4 md:h-full md:fixed md:left-0 md:top-0 bg-slate-800">
-                    <h1 className="text-left text-2xl pt-2 pb-5 text-white">
+                    <h1 className="md:text-left text-2xl pt-2 pb-5 text-white text-center">
                         Erik Doytchinov
                     </h1>
                     <img
