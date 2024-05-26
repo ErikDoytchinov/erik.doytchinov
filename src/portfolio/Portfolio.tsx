@@ -53,7 +53,7 @@ function Portfolio() {
                 ]
             </p>
             <ul className="text-white list-inside ml-3 pt-2">
-                <li className="list-item pt-1 pl-3">
+                <li className="list-item pt-1 pl-3 mb-3">
                     <div className="inline text-xs">
                         <p className="text-base">Software Engineer Intern</p>
                         <p className="text-sm">
@@ -113,7 +113,7 @@ function Portfolio() {
                         </ul>
                     </div>
                 </li>
-                <li className="list-item pt-1 pl-3">
+                <li className="list-item pt-1 pl-3 mb-3">
                     <div className="inline text-xs">
                         <p className="text-base">Service Associate</p>
                         <p className="text-sm">
@@ -164,7 +164,7 @@ function Portfolio() {
                         </ul>
                     </div>
                 </li>
-                <li className="list-item pt-1 pl-3">
+                <li className="list-item pt-1 pl-3 mb-3">
                     <div className="inline text-xs">
                         <p className="text-base">Software Engineer Intern</p>
                         <p className="text-sm">
