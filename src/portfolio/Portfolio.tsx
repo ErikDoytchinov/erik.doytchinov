@@ -21,7 +21,7 @@ function Portfolio() {
         <div className="flex-1 md:overflow-y-auto p-4 md:mt-0 md:ml-64 bg-neutral-900">
             <h1 className="text-2xl ml-6 pt-3 text-white">About Me</h1>
             <p className="top-10 ml-6 pt-5 left-3 text-white bdg-gradient-to-tr:bg-slate-300 text-sm">
-                Currently persuing my Bachelor&apos;s in Computer Science (
+                Currently pursuing my Bachelor&apos;s in Computer Science (
                 <a
                     href="https://vu.nl/en/education/bachelor/computer-science"
                     className="text-slate-400"

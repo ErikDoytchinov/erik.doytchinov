@@ -14,12 +14,39 @@ function App() {
                         alt="Picture of the author"
                         className="rounded-md md:w-auto  hidden md:block"
                     />
-                    <div className="mt-7">
+                    <div className="flex justify-evenly mt-7">
                         <a
-                            href="https://github.com/ErikDoytchinov"
-                            className="text-2xl text-slate-400"
+                            href="https://www.instagram.com/erik_doytchinov/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            GitHub
+                            <img
+                                src="https://cdn1.iconfinder.com/data/icons/social-media-outline-6/128/SocialMedia_Instagram-Outline-512.png"
+                                alt="instagram"
+                                className="w-8 h-8 mx-2 brightness-0 invert"
+                            />
+                        </a>
+                        <a
+                            href="https://www.github.com/erikdoytchinov"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="https://cdn4.iconfinder.com/data/icons/social-media-and-logos-12/32/Logo_Github-512.png"
+                                alt="github"
+                                className="w-8 h-8 mx-2 brightness-0 invert"
+                            />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/erik-doytchinov/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="https://cdn1.iconfinder.com/data/icons/social-media-outline-6/128/SocialMedia_LinkedIn-Outline-512.png"
+                                alt="linkedin"
+                                className="w-8 h-8 mx-2 brightness-0 invert"
+                            />
                         </a>
                     </div>
 
