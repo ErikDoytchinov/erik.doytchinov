@@ -21,7 +21,7 @@ function App() {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src="https://cdn1.iconfinder.com/data/icons/social-media-outline-6/128/SocialMedia_Instagram-Outline-512.png"
+                                src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-3/256/instagram-logo-512.png"
                                 alt="instagram"
                                 className="w-8 h-8 mx-2 brightness-0 invert"
                             />
@@ -47,6 +47,21 @@ function App() {
                                 alt="linkedin"
                                 className="w-8 h-8 mx-2 brightness-0 invert"
                             />
+                        </a>
+                    </div>
+                    <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+                    <div className="flex justify-right text-white">
+                        <a
+                            href=""
+                            target="_blank"
+                            className="py-2 text-sm flex items-center hover:bg-slate-700 w-full"
+                        >
+                            <img
+                                src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-3/256/notebook-1024.png"
+                                alt="blog"
+                                className="w-8 h-8 mx-2 brightness-0 invert"
+                            />
+                            Blog
                         </a>
                     </div>
                 </aside>
