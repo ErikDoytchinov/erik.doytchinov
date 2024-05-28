@@ -50,11 +50,11 @@ function App() {
                         </a>
                     </div>
                     <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-                    <div className="flex justify-right text-white">
+                    <div className="flex md:flex-col md:justify-right justify-between text-white">
                         <a
                             href=""
                             target="_blank"
-                            className="py-2 text-sm flex items-center hover:bg-slate-700 w-full"
+                            className="py-2 my-2 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
                         >
                             <img
                                 src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-3/256/notebook-1024.png"
@@ -62,6 +62,30 @@ function App() {
                                 className="w-8 h-8 mx-2 brightness-0 invert"
                             />
                             Blog
+                        </a>
+                        <a
+                            href=""
+                            target="_blank"
+                            className="py-2 my-2 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
+                        >
+                            <img
+                                src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-3/256/hamburger-512.png"
+                                alt="burger"
+                                className="w-8 h-8 mx-2 brightness-0 invert"
+                            />
+                            Food
+                        </a>
+                        <a
+                            href=""
+                            target="_blank"
+                            className="py-2 my-2 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
+                        >
+                            <img
+                                src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-5/256/video-camera-512.png"
+                                alt="camera"
+                                className="w-8 h-8 mx-2 brightness-0 invert"
+                            />
+                            Footage
                         </a>
                     </div>
                 </aside>
