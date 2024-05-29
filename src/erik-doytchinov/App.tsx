@@ -44,7 +44,7 @@ function App() {
                         alt="Picture of the author"
                         className="rounded-md md:w-auto  hidden md:block"
                     />
-                    <div className="flex justify-evenly mt-7">
+                    <div className="flex justify-evenly md:mt-7">
                         <a
                             href="https://www.instagram.com/erik_doytchinov/"
                             target="_blank"
@@ -83,7 +83,7 @@ function App() {
                     <div className="flex md:flex-col md:justify-right justify-between text-white">
                         <button
                             onClick={() => handlePageChange("blog")}
-                            className="py-2 my-2 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
+                            className="md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
                         >
                             <img
                                 src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-3/256/notebook-1024.png"
@@ -94,7 +94,7 @@ function App() {
                         </button>
                         <button
                             onClick={() => handlePageChange("food")}
-                            className="py-2 my-2 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
+                            className="md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
                         >
                             <img
                                 src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-3/256/hamburger-512.png"
@@ -105,7 +105,7 @@ function App() {
                         </button>
                         <button
                             onClick={() => handlePageChange("footage")}
-                            className="py-2 my-2 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
+                            className="md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
                         >
                             <img
                                 src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-5/256/video-camera-512.png"
