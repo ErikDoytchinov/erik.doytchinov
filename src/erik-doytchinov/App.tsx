@@ -1,12 +1,42 @@
 import "./App.css";
-import Portfolio from "../portfolio/Portfolio.tsx";
+import Portfolio from "./portfolio/Portfolio.tsx";
+import Blog from "./blog/Blog.tsx";
+import Food from "./food/Food.tsx";
+import Footage from "./footage/Footage.tsx";
+import React, { useState } from "react";
+
+type Page = "portfolio" | "blog" | "food" | "footage";
 
 function App() {
+    const [currentPage, setCurrentPage] = useState<Page>("portfolio");
+
+    const handlePageChange = (page: Page) => {
+        setCurrentPage(page);
+    };
+
+    const renderContent = () => {
+        switch (currentPage) {
+            case "portfolio":
+                return <Portfolio />;
+            case "blog":
+                return <Blog />;
+            case "food":
+                return <Food />;
+            case "footage":
+                return <Footage />;
+            default:
+                return <Portfolio />;
+        }
+    };
+
     return (
         <>
             <div className="h-screen flex flex-col md:flex-row overflow-y-scroll">
                 <aside className="md:w-64 w-full p-4 md:h-full md:fixed md:left-0 md:top-0 bg-slate-800">
-                    <h1 className="md:text-left text-2xl pt-2 pb-5 text-white text-center">
+                    <h1
+                        onClick={() => handlePageChange("portfolio")}
+                        className="md:text-left text-2xl pt-2 pb-5 text-white text-center"
+                    >
                         Erik Doytchinov
                     </h1>
                     <img
@@ -51,9 +81,8 @@ function App() {
                     </div>
                     <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
                     <div className="flex md:flex-col md:justify-right justify-between text-white">
-                        <a
-                            href=""
-                            target="_blank"
+                        <button
+                            onClick={() => handlePageChange("blog")}
                             className="py-2 my-2 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
                         >
                             <img
@@ -62,10 +91,9 @@ function App() {
                                 className="w-8 h-8 mx-2 brightness-0 invert"
                             />
                             Blog
-                        </a>
-                        <a
-                            href=""
-                            target="_blank"
+                        </button>
+                        <button
+                            onClick={() => handlePageChange("food")}
                             className="py-2 my-2 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
                         >
                             <img
@@ -74,10 +102,9 @@ function App() {
                                 className="w-8 h-8 mx-2 brightness-0 invert"
                             />
                             Food
-                        </a>
-                        <a
-                            href=""
-                            target="_blank"
+                        </button>
+                        <button
+                            onClick={() => handlePageChange("footage")}
                             className="py-2 my-2 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
                         >
                             <img
@@ -86,10 +113,10 @@ function App() {
                                 className="w-8 h-8 mx-2 brightness-0 invert"
                             />
                             Footage
-                        </a>
+                        </button>
                     </div>
                 </aside>
-                <Portfolio />
+                {renderContent()}
             </div>
         </>
     );

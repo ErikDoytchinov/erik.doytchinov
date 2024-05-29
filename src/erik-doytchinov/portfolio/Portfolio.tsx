@@ -18,9 +18,9 @@ function calculateTimeBetweenTwoStringDates(date1: string) {
 
 function Portfolio() {
     return (
-        <div className="flex-1 md:overflow-y-auto p-4 md:mt-0 md:ml-64 bg-neutral-900">
-            <h1 className="text-2xl ml-6 pt-3 text-white">About Me</h1>
-            <p className="top-10 ml-6 pt-5 left-3 text-white bdg-gradient-to-tr:bg-slate-300 text-sm">
+        <div className="flex-1 md:overflow-y-auto p-4 md:mt-0 md:ml-64 text-white bg-neutral-900">
+            <h1 className="text-2xl ml-6 pt-3 ">About Me</h1>
+            <p className="top-10 ml-6 pt-5 left-3  bdg-gradient-to-tr:bg-slate-300 text-sm">
                 Currently pursuing my Bachelor&apos;s in Computer Science (
                 <a
                     href="https://vu.nl/en/education/bachelor/computer-science"
@@ -35,10 +35,8 @@ function Portfolio() {
                 as a software engineer.
             </p>
             <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-            <h1 className="text-2xl ml-6 pt-1 left-3 text-white">
-                Experiences
-            </h1>
-            <p className="ml-6 pt-5 left-3 text-white bg-gradient-to-tr:bg-slate-300">
+            <h1 className="text-2xl ml-6 pt-1 left-3 ">Experiences</h1>
+            <p className="ml-6 pt-5 left-3  bg-gradient-to-tr:bg-slate-300">
                 [
                 <a href="/resume.pdf" className="text-slate-400">
                     CV
@@ -52,7 +50,7 @@ function Portfolio() {
                 </a>
                 ]
             </p>
-            <ul className="text-white list-inside ml-3 pt-2">
+            <ul className=" list-inside ml-3 pt-2">
                 <li className="list-item pt-1 pl-3 mb-3">
                     <div className="inline text-xs">
                         <p className="text-base">Software Engineer Intern</p>
@@ -260,12 +258,12 @@ function Portfolio() {
                 </li>
             </ul>
             <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-            <h1 className="text-2xl ml-6 pt-1 left-3 text-white">Projects</h1>
-            <p className="ml-6 pt-5 left-3 text-white bg-gradient-to-tr:bg-slate-300 text-sm">
+            <h1 className="text-2xl ml-6 pt-1 left-3 ">Projects</h1>
+            <p className="ml-6 pt-5 left-3  bg-gradient-to-tr:bg-slate-300 text-sm">
                 Some projects I&apos;ve worked on throughout the years listed
                 bellow.
             </p>
-            <ul className="text-white list-inside ml-3 pt-2">
+            <ul className=" list-inside ml-3 pt-2">
                 <li className="list-item pt-1 pl-3">
                     <a
                         href="https://github.com/ErikDoytchinov/Soluna"
@@ -283,7 +281,7 @@ function Portfolio() {
                 </li>
                 <li className="list-item pt-1 pl-3"></li>
             </ul>
-            <ul className="text-white list-inside ml-3 pt-2">
+            <ul className=" list-inside ml-3 pt-2">
                 <li className="list-item pt-1 pl-3">
                     <a
                         href="https://github.com/ErikDoytchinov/flavor-craft"
