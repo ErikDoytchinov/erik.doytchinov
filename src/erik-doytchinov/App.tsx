@@ -3,7 +3,7 @@ import Portfolio from "./portfolio/Portfolio.tsx";
 import Blog from "./blog/Blog.tsx";
 import Food from "./food/Food.tsx";
 import Footage from "./footage/Footage.tsx";
-import React, { useState } from "react";
+import { useState } from "react";
 
 type Page = "portfolio" | "blog" | "food" | "footage";
 
