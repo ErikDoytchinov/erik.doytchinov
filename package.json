@@ -11,6 +11,7 @@
     "deploy": "tsc && vite build && aws s3 sync ./dist s3://erik.doytchinov --acl public-read"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "eslint": "^8.57.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
