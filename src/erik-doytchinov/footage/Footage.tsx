@@ -7,16 +7,22 @@ type MediaItem = {
 const mediaItems: MediaItem[] = [
     {
         type: "photo",
-        src: "src/assets/DJI_0098.JPG",
+        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_0098.JPG",
         alt: "Photo 1 description",
     },
     {
         type: "photo",
-        src: "src/assets/DJI_0119.JPG",
+        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_0119.JPG",
         alt: "Photo 2 description",
     },
-    { type: "video", src: "src/assets/DJI_01111.MP4" },
-    { type: "video", src: "src/assets/DJI_0114.MP4" },
+    {
+        type: "video",
+        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_01111.MP4",
+    },
+    {
+        type: "video",
+        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_0114.MP4",
+    },
 ];
 
 function MediaItemComponent({ type, src, alt }: MediaItem) {
