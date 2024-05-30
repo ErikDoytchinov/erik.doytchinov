@@ -21,7 +21,7 @@ const mediaItems: MediaItem[] = [
 
 function MediaItemComponent({ type, src, alt }: MediaItem) {
     const commonClasses =
-        "border border-slate-500 rounded-md shadow-sm shadow-white mb-5";
+        "border border-slate-500 rounded-md shadow-sm shadow-white";
     if (type === "photo") {
         return (
             <img src={src} alt={alt} className={`w-full ${commonClasses}`} />
