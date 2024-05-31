@@ -83,7 +83,9 @@ function App() {
                     <div className="flex md:flex-col md:justify-right justify-between text-white">
                         <button
                             onClick={() => handlePageChange("blog")}
-                            className="md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
+                            className={`md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full ${
+                                currentPage === "blog" ? "bg-slate-700" : ""
+                            }`}
                         >
                             <img
                                 src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-3/256/notebook-1024.png"
@@ -94,7 +96,9 @@ function App() {
                         </button>
                         <button
                             onClick={() => handlePageChange("food")}
-                            className="md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
+                            className={`md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full ${
+                                currentPage === "food" ? "bg-slate-700" : ""
+                            }`}
                         >
                             <img
                                 src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-3/256/hamburger-512.png"
@@ -105,7 +109,9 @@ function App() {
                         </button>
                         <button
                             onClick={() => handlePageChange("footage")}
-                            className="md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full"
+                            className={`md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full ${
+                                currentPage === "footage" ? "bg-slate-700" : ""
+                            }`}
                         >
                             <img
                                 src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-5/256/video-camera-512.png"
