@@ -1,6 +1,7 @@
 type MediaItem = {
     type: "photo" | "video";
     src: string;
+    date?: string;
     alt?: string;
 };
 
@@ -8,11 +9,13 @@ const mediaItemsRow1: MediaItem[] = [
     {
         type: "video",
         src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_01111.MP4",
+        date: "2024-05-01",
     },
     {
         type: "photo",
         src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_0098.JPG",
         alt: "Photo 1 description",
+        date: "2024-05-09",
     },
 ];
 
@@ -21,31 +24,47 @@ const mediaItemsRow2: MediaItem[] = [
         type: "photo",
         src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_0119.JPG",
         alt: "Photo 2 description",
+        date: "2024-05-30",
     },
     {
         type: "video",
         src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_0115.mp4",
+        date: "2024-05-30",
     },
 ];
 
-function MediaItemComponent({ type, src, alt }: MediaItem) {
+function MediaItemComponent({ type, src, alt, date }: MediaItem) {
     const commonClasses =
         "border border-slate-500 rounded-md shadow-sm shadow-white";
     if (type === "photo") {
         return (
-            <img src={src} alt={alt} className={`w-full ${commonClasses}`} />
+            <div className="relative inline-block">
+                <img
+                    src={src}
+                    alt={alt}
+                    className={`w-full ${commonClasses}`}
+                />
+                <div className="absolute top-3 right-3 bg-white text-gray-800 text-sm font-semibold px-3 py-1 rounded-full shadow-md">
+                    {date}
+                </div>
+            </div>
         );
     } else if (type === "video") {
         return (
-            <div className={`aspect-w-9 aspect-h-16 ${commonClasses}`}>
-                <video
-                    controls
-                    preload="metadata"
-                    className="w-full h-full rounded-md"
-                >
-                    <source src={`${src}#t=0.001`} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+            <div className="relative inline-block">
+                <div className={`aspect-w-9 aspect-h-16 ${commonClasses}`}>
+                    <video
+                        controls
+                        preload="metadata"
+                        className="w-full h-full rounded-md"
+                    >
+                        <source src={`${src}#t=0.001`} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div className="absolute top-3 right-3 bg-white text-gray-800 text-sm font-semibold px-3 py-1 rounded-full shadow-md">
+                    {date}
+                </div>
             </div>
         );
     } else {
