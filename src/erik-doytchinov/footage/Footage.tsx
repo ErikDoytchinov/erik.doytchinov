@@ -35,8 +35,12 @@ function MediaItemComponent({ type, src, alt }: MediaItem) {
     } else if (type === "video") {
         return (
             <div className={`aspect-w-9 aspect-h-16 ${commonClasses}`}>
-                <video controls className="w-full h-full rounded-md">
-                    <source src={src} type="video/mp4" />
+                <video
+                    controls
+                    preload="metadata"
+                    className="w-full h-full rounded-md"
+                >
+                    <source src={`${src}#t=0.001`} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
