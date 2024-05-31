@@ -53,7 +53,7 @@ function App() {
                             <img
                                 src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-3/256/instagram-logo-512.png"
                                 alt="instagram"
-                                className="w-8 h-8 mx-2 brightness-0 invert"
+                                className="w-6 h-6 md:w-8 md:h-8 mx-2 brightness-0 invert"
                             />
                         </a>
                         <a
@@ -64,7 +64,7 @@ function App() {
                             <img
                                 src="https://cdn4.iconfinder.com/data/icons/social-media-and-logos-12/32/Logo_Github-512.png"
                                 alt="github"
-                                className="w-8 h-8 mx-2 brightness-0 invert"
+                                className="w-6 h-6 md:w-8 md:h-8 mx-2 brightness-0 invert"
                             />
                         </a>
                         <a
@@ -75,7 +75,7 @@ function App() {
                             <img
                                 src="https://cdn3.iconfinder.com/data/icons/essential-pack-2/48/8-Email-512.png"
                                 alt="linkedin"
-                                className="w-8 h-8 mx-2 brightness-0 invert"
+                                className="w-6 h-6 md:w-8 md:h-8 mx-2 brightness-0 invert"
                             />
                         </a>
                     </div>

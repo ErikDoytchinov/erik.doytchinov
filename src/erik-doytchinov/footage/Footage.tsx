@@ -4,12 +4,19 @@ type MediaItem = {
     alt?: string;
 };
 
-const mediaItems: MediaItem[] = [
+const mediaItemsRow1: MediaItem[] = [
+    {
+        type: "video",
+        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_01111.MP4",
+    },
     {
         type: "photo",
         src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_0098.JPG",
         alt: "Photo 1 description",
     },
+];
+
+const mediaItemsRow2: MediaItem[] = [
     {
         type: "photo",
         src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_0119.JPG",
@@ -17,11 +24,7 @@ const mediaItems: MediaItem[] = [
     },
     {
         type: "video",
-        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_01111.MP4",
-    },
-    {
-        type: "video",
-        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_0114.MP4",
+        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_0115.mp4",
     },
 ];
 
@@ -60,9 +63,16 @@ function Footage() {
             </p>
             <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
             <div className="grid md:grid-cols-2 gap-5">
-                {mediaItems.map((item, index) => (
-                    <MediaItemComponent key={index} {...item} />
-                ))}
+                <div className="grid gap-5">
+                    {mediaItemsRow1.map((item, index) => (
+                        <MediaItemComponent key={index} {...item} />
+                    ))}
+                </div>
+                <div className="grid gap-5">
+                    {mediaItemsRow2.map((item, index) => (
+                        <MediaItemComponent key={index} {...item} />
+                    ))}
+                </div>
             </div>
         </div>
     );
