@@ -3,6 +3,7 @@ type MediaItem = {
     src: string;
     date?: string;
     alt?: string;
+    aspectRatio?: string;
 };
 
 const mediaItemsRow1: MediaItem[] = [
@@ -16,6 +17,12 @@ const mediaItemsRow1: MediaItem[] = [
         src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_0065.jpeg",
         alt: "Photo 1 description",
         date: "2024-05-09",
+    },
+    {
+        type: "video",
+        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_0007.mov",
+        date: "2024-04-21",
+        aspectRatio: "16:9",
     },
 ];
 
@@ -31,9 +38,15 @@ const mediaItemsRow2: MediaItem[] = [
         src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_1022.mp4",
         date: "2024-05-02",
     },
+    {
+        type: "photo",
+        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_1023.jpeg",
+        alt: "Photo 2 description",
+        date: "2024-05-02",
+    },
 ];
 
-function MediaItemComponent({ type, src, alt, date }: MediaItem) {
+function MediaItemComponent({ type, src, alt, date, aspectRatio }: MediaItem) {
     const commonClasses =
         "border border-slate-500 rounded-md shadow-sm shadow-white";
     if (type === "photo") {
@@ -52,7 +65,13 @@ function MediaItemComponent({ type, src, alt, date }: MediaItem) {
     } else if (type === "video") {
         return (
             <div className="relative inline-block">
-                <div className={`aspect-w-9 aspect-h-16 ${commonClasses}`}>
+                <div
+                    className={`${
+                        aspectRatio === "16:9"
+                            ? "aspect-w-16 aspect-h-9"
+                            : "aspect-w-9 aspect-h-16"
+                    } ${commonClasses}`}
+                >
                     <video
                         controls
                         preload="metadata"
