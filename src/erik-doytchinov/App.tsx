@@ -32,10 +32,10 @@ function App() {
     return (
         <>
             <div className="h-screen flex flex-col md:flex-row overflow-y-scroll">
-                <aside className="md:w-64 w-full p-4 md:h-full md:fixed md:left-0 md:top-0 bg-slate-800">
+                <aside className="md:w-64 w-full p-4 md:h-full md:fixed md:left-0 md:top-0 text-erik.doytchinov-500 bg-erik.doytchinov-200">
                     <h1
                         onClick={() => handlePageChange("portfolio")}
-                        className="md:text-left text-2xl pt-2 pb-5 text-white text-center"
+                        className="md:text-left text-2xl pt-2 pb-5 text-center"
                     >
                         Erik Doytchinov
                     </h1>
@@ -51,7 +51,7 @@ function App() {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-3/256/instagram-logo-512.png"
+                                src="/instagram-icon.svg"
                                 alt="instagram"
                                 className="w-6 h-6 md:w-8 md:h-8 mx-2 brightness-0 invert"
                             />
@@ -62,7 +62,7 @@ function App() {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src="https://cdn4.iconfinder.com/data/icons/social-media-and-logos-12/32/Logo_Github-512.png"
+                                src="/github-icon.svg"
                                 alt="github"
                                 className="w-6 h-6 md:w-8 md:h-8 mx-2 brightness-0 invert"
                             />
@@ -73,14 +73,14 @@ function App() {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src="https://cdn3.iconfinder.com/data/icons/essential-pack-2/48/8-Email-512.png"
+                                src="/mail-icon.svg"
                                 alt="linkedin"
                                 className="w-6 h-6 md:w-8 md:h-8 mx-2 brightness-0 invert"
                             />
                         </a>
                     </div>
                     <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-                    <div className="flex md:flex-col md:justify-right justify-between text-white">
+                    <div className="flex md:flex-col md:justify-right justify-between">
                         <button
                             onClick={() => handlePageChange("blog")}
                             className={`md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full ${
@@ -88,7 +88,7 @@ function App() {
                             }`}
                         >
                             <img
-                                src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-3/256/notebook-1024.png"
+                                src="/notebook-icon.svg"
                                 alt="blog"
                                 className="w-8 h-8 mx-2 brightness-0 invert"
                             />
@@ -101,7 +101,7 @@ function App() {
                             }`}
                         >
                             <img
-                                src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-3/256/hamburger-512.png"
+                                src="/hamburger-icon.svg"
                                 alt="burger"
                                 className="w-8 h-8 mx-2 brightness-0 invert"
                             />
@@ -114,7 +114,7 @@ function App() {
                             }`}
                         >
                             <img
-                                src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-5/256/video-camera-512.png"
+                                src="/video-camera-icon.svg"
                                 alt="camera"
                                 className="w-8 h-8 mx-2 brightness-0 invert"
                             />

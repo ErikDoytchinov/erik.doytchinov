@@ -8,12 +8,12 @@ type MediaItem = {
 const mediaItemsRow1: MediaItem[] = [
     {
         type: "video",
-        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_01111.MP4",
-        date: "2024-05-01",
+        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_0115.mp4",
+        date: "2024-05-30",
     },
     {
         type: "photo",
-        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_0098.JPG",
+        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_0065.jpeg",
         alt: "Photo 1 description",
         date: "2024-05-09",
     },
@@ -22,14 +22,14 @@ const mediaItemsRow1: MediaItem[] = [
 const mediaItemsRow2: MediaItem[] = [
     {
         type: "photo",
-        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_0119.JPG",
+        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_0119.jpeg",
         alt: "Photo 2 description",
         date: "2024-05-30",
     },
     {
         type: "video",
-        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/DJI_0115.mp4",
-        date: "2024-05-30",
+        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_1022.mp4",
+        date: "2024-05-02",
     },
 ];
 
@@ -74,7 +74,7 @@ function MediaItemComponent({ type, src, alt, date }: MediaItem) {
 
 function Footage() {
     return (
-        <div className="flex-1 md:overflow-y-auto p-4 md:mt-0 md:ml-64 text-white bg-neutral-900">
+        <div className="flex-1 md:overflow-y-auto p-4 md:mt-0 md:ml-64 text-erik.doytchinov-500 bg-erik.doytchinov-100">
             <h1 className="text-2xl ml-6 pt-3 ">Drone Footage</h1>
             <p className="top-10 ml-6 pt-5 left-3  bdg-gradient-to-tr:bg-slate-300 text-sm">
                 Here are some photos and videos I took with my DJI Mini 3 around
