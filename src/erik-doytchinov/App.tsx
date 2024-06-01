@@ -11,7 +11,8 @@ function App() {
     const [currentPage, setCurrentPage] = useState<Page>("portfolio");
 
     const handlePageChange = (page: Page) => {
-        setCurrentPage(page);
+        if (currentPage === page) setCurrentPage("portfolio");
+        else setCurrentPage(page);
     };
 
     const renderContent = () => {
