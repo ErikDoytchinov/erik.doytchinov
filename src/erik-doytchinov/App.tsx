@@ -32,7 +32,7 @@ function App() {
 
     return (
         <>
-            <div className="h-screen flex flex-col md:flex-row overflow-y-scroll">
+            <div className="h-screen flex flex-col md:flex-row no-scrollbar overflow-y-scroll">
                 <aside className="md:w-64 w-full p-4 md:h-full md:fixed md:left-0 md:top-0 text-erik.doytchinov-500 bg-erik.doytchinov-200">
                     <h1
                         onClick={() => handlePageChange("portfolio")}
