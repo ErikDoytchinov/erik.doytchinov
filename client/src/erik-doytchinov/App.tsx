@@ -34,17 +34,17 @@ function App() {
         <>
             <div className="h-screen flex flex-col md:flex-row no-scrollbar overflow-y-scroll">
                 <aside className="md:w-64 w-full p-4 md:h-full md:fixed md:left-0 md:top-0 text-erik.doytchinov-500 bg-erik.doytchinov-200">
-                    <h1
-                        onClick={() => handlePageChange("portfolio")}
-                        className="md:text-left text-2xl pt-2 pb-5 text-center"
-                    >
-                        Erik Doytchinov
-                    </h1>
                     <img
                         src="https://media.licdn.com/dms/image/D4E03AQGKkYD_g2UwYw/profile-displayphoto-shrink_800_800/0/1705500073136?e=1726099200&v=beta&t=3goLEMs_r2U24sQbrVi-iZD14GkKvqC1g0zis6SlV40"
                         alt="Picture of the me"
                         className="rounded-full md:w-auto  hidden md:block"
                     />
+                    <h1
+                        onClick={() => handlePageChange("portfolio")}
+                        className="text-center text-2xl pt-2 pb-5"
+                    >
+                        Erik Doytchinov
+                    </h1>
                     <div className="flex justify-evenly md:mt-7">
                         <a
                             href="https://www.instagram.com/erik_doytchinov/"
