@@ -41,9 +41,9 @@ function App() {
                         Erik Doytchinov
                     </h1>
                     <img
-                        src="https://media.licdn.com/dms/image/D4E03AQGKkYD_g2UwYw/profile-displayphoto-shrink_400_400/0/1705500073136?e=1720051200&v=beta&t=bqr2OTW8NiezDIWYPRp_FMxSIIAedCMSHipHJq-qC9M"
-                        alt="Picture of the author"
-                        className="rounded-md md:w-auto  hidden md:block"
+                        src="https://media.licdn.com/dms/image/D4E03AQGKkYD_g2UwYw/profile-displayphoto-shrink_800_800/0/1705500073136?e=1726099200&v=beta&t=3goLEMs_r2U24sQbrVi-iZD14GkKvqC1g0zis6SlV40"
+                        alt="Picture of the me"
+                        className="rounded-full md:w-auto  hidden md:block"
                     />
                     <div className="flex justify-evenly md:mt-7">
                         <a
