@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "postbuild": "tsc && vite build --outDir=../server/static --emptyOutDir",
+    "postbuild": "tsc && vite build",
     "lint": "eslint src",
     "preview": "vite preview",
     "deploy": "tsc && vite build && aws s3 sync ./dist s3://erik.doytchinov --acl public-read"

@@ -11,6 +11,7 @@ python = "^3.11"
 Flask = "^3.0.3"
 flask-cors = "^4.0.1"
 gunicorn = "^22.0.0"
+poethepoet = "^0.27.0"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.4.9"
@@ -19,3 +20,5 @@ ruff = "^0.4.9"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.poe.tasks]
+deploy = "scp -r -i ~/.ssh/macbook-work.pem . ec2-user@ec2-16-171-35-230.eu-north-1.compute.amazonaws.com:/home/ec2-user/server"
