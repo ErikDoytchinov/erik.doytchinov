@@ -8,7 +8,6 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
-poethepoet = "^0.27.0"
 fastapi = "^0.111.0"
 uvicorn = "^0.30.1"
 
@@ -20,5 +19,5 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poe.tasks]
-run = "uvicorn run:app --host 127.0.0.1 --port 1400 --workers 4"
+run = "uvicorn run:app --host 0.0.0.0 --port 8000 --workers 4"
 deploy = "scp -r -i ~/.ssh/macbook-personal.pem . ec2-user@ec2-16-171-35-230.eu-north-1.compute.amazonaws.com:/home/ec2-user/server"
