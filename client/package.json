@@ -9,7 +9,7 @@
     "postbuild": "tsc && vite build",
     "lint": "eslint src",
     "preview": "vite preview",
-    "deploy": "tsc && vite build && aws s3 sync ./dist s3://erik.doytchinov --acl public-read"
+    "deploy": "tsc && vite build && aws s3 sync ./dist s3://erik.doytchinov"
 
   },
   "dependencies": {

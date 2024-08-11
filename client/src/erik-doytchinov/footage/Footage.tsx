@@ -9,18 +9,23 @@ type MediaItem = {
 const mediaItemsRow1: MediaItem[] = [
     {
         type: "video",
-        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_0115.mp4",
+        src: "https://erik.doytchinov.eu/footage/DJI_1003.mp4",
         date: "2024-05-30",
     },
     {
         type: "photo",
-        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_0065.jpeg",
+        src: "https://erik.doytchinov.eu/footage/DJI_1002.jpeg",
         alt: "Photo 1 description",
         date: "2024-05-09",
     },
     {
+        type: "photo",
+        src: "https://erik.doytchinov.eu/footage/DJI_1102.jpeg",
+        date: "2024-08-11",
+    },
+    {
         type: "video",
-        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_0007.mov",
+        src: "https://erik.doytchinov.eu/footage/DJI_1000.mov",
         date: "2024-04-21",
         aspectRatio: "16:9",
     },
@@ -29,20 +34,36 @@ const mediaItemsRow1: MediaItem[] = [
 const mediaItemsRow2: MediaItem[] = [
     {
         type: "photo",
-        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_0119.jpeg",
+        src: "https://erik.doytchinov.eu/footage/DJI_1001.jpeg",
         alt: "Photo 2 description",
         date: "2024-05-30",
     },
     {
         type: "video",
-        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_1022.mp4",
+        src: "https://erik.doytchinov.eu/footage/DJI_1004.mp4",
         date: "2024-05-02",
     },
     {
         type: "photo",
-        src: "https://s3.eu-north-1.amazonaws.com/erik.doytchinov/footage/DJI_1023.jpeg",
+        src: "https://erik.doytchinov.eu/footage/DJI_1005.jpeg",
         alt: "Photo 2 description",
         date: "2024-05-02",
+    },
+    {
+        type: "photo",
+        src: "https://erik.doytchinov.eu/footage/DJI_1100.jpeg",
+        date: "2024-08-11",
+    },
+    {
+        type: "photo",
+        src: "https://erik.doytchinov.eu/footage/DJI_1103.jpeg",
+        date: "2024-08-11",
+    },
+    {
+        type: "video",
+        src: "https://erik.doytchinov.eu/footage/DJI_1101.mp4",
+        date: "2024-08-11",
+        aspectRatio: "16:9",
     },
 ];
 
@@ -97,7 +118,7 @@ function Footage() {
             <h1 className="text-2xl ml-6 pt-3 ">Drone Footage</h1>
             <p className="top-10 ml-6 pt-5 left-3  bdg-gradient-to-tr:bg-slate-300 text-sm">
                 Here are some photos and videos I took with my DJI Mini 3 around
-                Hilversum and Muidenport. Enjoy!
+                the Netherlands. Enjoy!
             </p>
             <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
             <div className="grid md:grid-cols-2 gap-5">
