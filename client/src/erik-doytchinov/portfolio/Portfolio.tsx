@@ -1,3 +1,5 @@
+import experience from "./experience";
+
 function calculateTimeBetweenTwoStringDates(date1: string) {
     const date: Date = new Date(date1);
     const dateNow: Date = new Date();
@@ -51,211 +53,39 @@ function Portfolio() {
                 ]
             </p>
             <ul className=" list-inside ml-3 pt-2">
-                <li className="list-item pt-1 pl-3 mb-3">
-                    <div className="inline text-xs">
-                        <p className="text-base">Software Engineer Intern</p>
-                        <p className="text-sm">
-                            <a
-                                href="https://www.zivver.com/"
-                                className="text-slate-400"
-                            >
-                                Zivver&nbsp;
-                            </a>
-                            · Internship
-                        </p>
-                        <p className="text-xs">
-                            Mar 2024 - Present ·
-                            {calculateTimeBetweenTwoStringDates("2024-03-01")}
-                        </p>
-                        <ul className="pl-4 pt-1">
-                            <li>
-                                <p>
-                                    • Led the performance optimization of key
-                                    software systems, focusing on enhancing both
-                                    frontend and backend functionalities to
-                                    boost overall efficiency.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    • Directed the design and implementation of
-                                    user interface improvements, significantly
-                                    elevating user experience across software
-                                    platforms.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    • Engineered and implemented scripts and
-                                    tools for real-time performance evaluation
-                                    of critical operational rules in production
-                                    environments.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    • Developed an internal analytical tool to
-                                    monitor and analyze trigger events based on
-                                    input data, enhancing strategic operational
-                                    insights.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    • Collaborated with cross-functional team
-                                    members to ensure seamless integration of
-                                    performance improvements into existing
-                                    systems.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li className="list-item pt-1 pl-3 mb-3">
-                    <div className="inline text-xs">
-                        <p className="text-base">Service Associate</p>
-                        <p className="text-sm">
-                            <a
-                                href="https://sugo.nl/"
-                                className="text-slate-400"
-                            >
-                                SUGO Pizza al Taglio&nbsp;
-                            </a>
-                            · Part-time
-                        </p>
-                        <p className="text-xs">
-                            Jan 2023 - Present ·
-                            {calculateTimeBetweenTwoStringDates("2023-01-01")}
-                        </p>
-                        <ul className="pl-4 pt-1">
-                            <li>
-                                <p>
-                                    • Expertly prepared and cooked a wide range
-                                    of Italian-style pizzas to perfection,
-                                    ensuring consistency in taste and
-                                    presentation.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    • Maintained a clean and organized kitchen,
-                                    adhering to food safety and hygiene
-                                    standards. Demonstrated proficiency in
-                                    working with pizza ovens and other kitchen
-                                    equipment.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    • Coordinated and supervised fellow staff
-                                    members during shifts, ensuring smooth
-                                    restaurant operations.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    • Fostered a collaborative and positive work
-                                    environment, promoting teamwork and staff
-                                    morale
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li className="list-item pt-1 pl-3 mb-3">
-                    <div className="inline text-xs">
-                        <p className="text-base">Software Engineer Intern</p>
-                        <p className="text-sm">
-                            <a
-                                href="https://www.dvbcontrol.com/"
-                                className="text-slate-400"
-                            >
-                                DVBControl&nbsp;
-                            </a>
-                            · Internship
-                        </p>
-                        <p className="text-xs">Aug 2023 - Oct 2023 · 3 mos</p>
-                        <ul className="pl-4 pt-1">
-                            <li>
-                                <p>
-                                    •Collaborated with the development team to
-                                    create a web portal for DVB Control&apos;s
-                                    broadcasting monitoring tool.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    •Utilized the Angular framework to design
-                                    and implement user-friendly web
-                                    applications.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    •Assisted in the analysis of databases to
-                                    enhance data storage and retrieval
-                                    efficiency.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    •Assisted in implementing security measures
-                                    to safeguard sensitive data and protect
-                                    against potential vulnerabilities.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    •Assisted in resolving technical challenges,
-                                    ensuring the project met performance and
-                                    security standards.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li className="list-item pt-1 pl-3">
-                    <div className="inline text-xs">
-                        <p className="text-base">Customer Service Assistant</p>
-                        <p className="text-sm">
-                            <a
-                                href="https://jackastors.com/"
-                                className="text-slate-400"
-                            >
-                                Jack Astor&apos;s Bar and Grill&nbsp;
-                            </a>
-                            · Part-time
-                        </p>
-                        <p className="text-xs">Feb 2022 - Sep 2022 · 8 mos</p>
-                        <ul className="pl-4 pt-1">
-                            <li>
-                                <p>
-                                    • Skilled in delivering outstanding service
-                                    by greeting and serving customers.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    • Strong customer service attitude,
-                                    self-reliant, dependable, able to
-                                    prioritize, and multitask.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    • Experience working as a leader and able to
-                                    work well with others to accomplish a goal.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    • Experienced with handling of high volume
-                                    of customers.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+                {experience.map((exp: any) => (
+                    <li
+                        key="1"
+                        className="flex md:flex-row flex-col p-3 mb-3 bg-erik.doytchinov-200 rounded-md"
+                    >
+                        <div className="inline text-xs w-40">
+                            <p>
+                                {exp.startDate} - {exp.endDate}
+                                <br className="hidden md:block" />
+                                <span className="md:hidden"> | </span>
+                                {calculateTimeBetweenTwoStringDates(
+                                    exp.startDate
+                                )}
+                            </p>
+                        </div>
+                        <div className="inline">
+                            <p className="text-base">{exp.title}</p>
+                            <p className="text-sm">
+                                <a href={exp.link} className="text-slate-400">
+                                    {exp.company}
+                                </a>
+                                · {exp.type}
+                            </p>
+                            <ul className="pl-4 pt-1 text-xs">
+                                {exp.description.map((desc: any) => (
+                                    <li key="">
+                                        <p>• {desc}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </li>
+                ))}
             </ul>
             <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
             <h1 className="text-2xl ml-6 pt-1 left-3 ">Projects</h1>

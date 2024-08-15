@@ -122,12 +122,12 @@ function Footage() {
             </p>
             <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
             <div className="grid md:grid-cols-2 gap-5">
-                <div className="grid gap-5">
+                <div className="grid gap-5 z-20">
                     {mediaItemsRow1.map((item, index) => (
                         <MediaItemComponent key={index} {...item} />
                     ))}
                 </div>
-                <div className="grid gap-5">
+                <div className="grid gap-5 z-20">
                     {mediaItemsRow2.map((item, index) => (
                         <MediaItemComponent key={index} {...item} />
                     ))}

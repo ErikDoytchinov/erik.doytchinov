@@ -3,7 +3,7 @@ import Portfolio from "./portfolio/Portfolio.tsx";
 import Blog from "./blog/Blog.tsx";
 import Food from "./food/Food.tsx";
 import Footage from "./footage/Footage.tsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Page = "portfolio" | "blog" | "food" | "footage";
 
@@ -30,8 +30,30 @@ function App() {
         }
     };
 
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+
+    useEffect(() => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const handleMouseMove = (event: any) => {
+            setPosition({ x: event.clientX, y: event.clientY });
+        };
+
+        window.addEventListener("mousemove", handleMouseMove);
+
+        return () => {
+            window.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, []);
+
     return (
         <>
+            <div
+                className="cursor-glow"
+                style={{
+                    left: `${position.x}px`,
+                    top: `${position.y}px`,
+                }}
+            ></div>
             <div className="h-screen flex flex-col md:flex-row no-scrollbar overflow-y-scroll">
                 <aside className="md:w-64 w-full p-4 md:h-full md:fixed md:left-0 md:top-0 text-erik.doytchinov-500 bg-erik.doytchinov-200">
                     <img
