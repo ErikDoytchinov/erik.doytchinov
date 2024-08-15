@@ -1,4 +1,5 @@
-import experience from "./experience";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import experience from "./experience.json";
 
 function calculateTimeBetweenTwoStringDates(date1: string) {
     const date: Date = new Date(date1);
