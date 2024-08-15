@@ -10,7 +10,6 @@
     "lint": "eslint src",
     "preview": "vite preview",
     "deploy": "tsc && vite build && aws s3 sync ./dist s3://erik.doytchinov"
-
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -20,6 +19,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.2.0",
+    "@types/node": "^22.3.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
