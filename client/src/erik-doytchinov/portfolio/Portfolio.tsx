@@ -59,7 +59,7 @@ function Portfolio() {
                         key="1"
                         className="flex md:flex-row flex-col p-3 mb-3 bg-erik.doytchinov-200 rounded-md"
                     >
-                        <div className="inline text-xs w-40">
+                        <div className="inline text-xs md:w-40">
                             <p>
                                 {exp.startDate} - {exp.endDate}
                                 <br className="hidden md:block" />
