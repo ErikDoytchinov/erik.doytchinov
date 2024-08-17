@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import experience from "./experience.json";
 
-function calculateTimeBetweenTwoStringDates(date1: string) {
+function calculateTimeDifference(date1: string) {
     const date: Date = new Date(date1);
     const dateNow: Date = new Date();
     const diffTime = Math.abs(dateNow.getTime() - date.getTime());
@@ -64,9 +64,9 @@ function Portfolio() {
                                 {exp.startDate} - {exp.endDate}
                                 <br className="hidden md:block" />
                                 <span className="md:hidden"> | </span>
-                                {calculateTimeBetweenTwoStringDates(
-                                    exp.startDate
-                                )}
+                                {exp.endDate !== "Present"
+                                    ? exp.totalTime
+                                    : calculateTimeDifference(exp.startDate)}
                             </p>
                         </div>
                         <div className="inline">
