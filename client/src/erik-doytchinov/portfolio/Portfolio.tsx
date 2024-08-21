@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import experience from "./experience.json";
+import props from "./properties.json";
 
 function calculateTimeDifference(date1: string) {
     const date: Date = new Date(date1);
@@ -22,8 +23,8 @@ function calculateTimeDifference(date1: string) {
 function Portfolio() {
     return (
         <div className="flex-1 md:overflow-y-auto p-4 md:mt-0 md:ml-64 no-scrollbar text-erik.doytchinov-500 bg-erik.doytchinov-100">
-            <h1 className="text-2xl ml-6 pt-3 ">About Me</h1>
-            <p className="top-10 ml-6 pt-5 left-3  bdg-gradient-to-tr:bg-slate-300 text-sm">
+            <h1 className="text-2xl ml-6 pt-3">About Me</h1>
+            <p className="top-10 ml-6 pt-5 left-3 text-sm">
                 Currently pursuing my Bachelor&apos;s in Computer Science (
                 <a
                     href="https://vu.nl/en/education/bachelor/computer-science"
@@ -54,9 +55,9 @@ function Portfolio() {
                 ]
             </p>
             <ul className=" list-inside ml-3 pt-2">
-                {experience.map((exp: any) => (
+                {props.experiences.map((exp: any) => (
                     <li
-                        key="1"
+                        key={exp.company}
                         className="flex md:flex-row flex-col p-3 mb-3 bg-erik.doytchinov-200 rounded-md"
                     >
                         <div className="inline text-xs md:min-w-40">
@@ -79,7 +80,7 @@ function Portfolio() {
                             </p>
                             <ul className="pl-4 pt-1 text-xs">
                                 {exp.description.map((desc: any) => (
-                                    <li key="">
+                                    <li key={desc}>
                                         <p>• {desc}</p>
                                     </li>
                                 ))}
