@@ -29,6 +29,17 @@ const mediaItemsRow1: MediaItem[] = [
         date: "2024-04-21",
         aspectRatio: "16:9",
     },
+    {
+        type: "photo",
+        src: "https://erik.doytchinov.eu/footage/DJI_1202.jpeg",
+        date: "2024-09-10",
+    },
+    {
+        type: "video",
+        src: "https://erik.doytchinov.eu/footage/DJI_1200.mp4",
+        date: "2024-09-10",
+        aspectRatio: "16:9",
+    },
 ];
 
 const mediaItemsRow2: MediaItem[] = [
@@ -48,6 +59,11 @@ const mediaItemsRow2: MediaItem[] = [
         src: "https://erik.doytchinov.eu/footage/DJI_1005.jpeg",
         alt: "Photo 2 description",
         date: "2024-05-02",
+    },
+    {
+        type: "photo",
+        src: "https://erik.doytchinov.eu/footage/DJI_1201.jpeg",
+        date: "2024-09-10",
     },
     {
         type: "photo",
