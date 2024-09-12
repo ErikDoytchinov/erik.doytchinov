@@ -57,7 +57,7 @@ function App() {
             <div className="h-screen flex flex-col md:flex-row no-scrollbar overflow-y-scroll">
                 <aside className="md:w-64 w-full p-4 md:h-full md:fixed md:left-0 md:top-0 text-erik.doytchinov-500 bg-erik.doytchinov-200">
                     <img
-                        src="https://media.licdn.com/dms/image/D4E03AQGKkYD_g2UwYw/profile-displayphoto-shrink_800_800/0/1705500073136?e=1726099200&v=beta&t=3goLEMs_r2U24sQbrVi-iZD14GkKvqC1g0zis6SlV40"
+                        src="https://media.licdn.com/dms/image/v2/D4E03AQGKkYD_g2UwYw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1705500073136?e=1731542400&v=beta&t=AHrr8TH-MsZyKdUGJ6UlYv_-LM_wnrgDmmcLQ6m-iw0"
                         alt="Picture of the me"
                         className="rounded-full md:w-auto  hidden md:block"
                     />
