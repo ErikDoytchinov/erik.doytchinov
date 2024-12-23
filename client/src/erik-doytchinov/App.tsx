@@ -3,7 +3,7 @@ import Portfolio from "./portfolio/Portfolio.tsx";
 import Blog from "./blog/Blog.tsx";
 import Food from "./food/Food.tsx";
 import Footage from "./footage/Footage.tsx";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 type Page = "portfolio" | "blog" | "food" | "footage";
 
@@ -30,34 +30,12 @@ function App() {
         }
     };
 
-    const [position, setPosition] = useState({ x: 0, y: 0 });
-
-    useEffect(() => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const handleMouseMove = (event: any) => {
-            setPosition({ x: event.clientX, y: event.clientY });
-        };
-
-        window.addEventListener("mousemove", handleMouseMove);
-
-        return () => {
-            window.removeEventListener("mousemove", handleMouseMove);
-        };
-    }, []);
-
     return (
         <>
-            <div
-                className="cursor-glow"
-                style={{
-                    left: `${position.x}px`,
-                    top: `${position.y}px`,
-                }}
-            ></div>
             <div className="h-screen flex flex-col md:flex-row no-scrollbar overflow-y-scroll">
                 <aside className="md:w-64 w-full p-4 md:h-full md:fixed md:left-0 md:top-0 text-erik.doytchinov-500 bg-erik.doytchinov-200">
                     <img
-                        src="https://media.licdn.com/dms/image/v2/D4E03AQGKkYD_g2UwYw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1705500073136?e=1731542400&v=beta&t=AHrr8TH-MsZyKdUGJ6UlYv_-LM_wnrgDmmcLQ6m-iw0"
+                        src="https://media.licdn.com/dms/image/v2/D4E03AQGKkYD_g2UwYw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1705500073136?e=1740614400&v=beta&t=7NysDc8FUbs8_Jj-UsuhrrYPECGgc8kpq-q7Mo6Jnz4"
                         alt="Picture of the me"
                         className="rounded-full md:w-auto  hidden md:block"
                     />
@@ -104,7 +82,7 @@ function App() {
                     </div>
                     <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
                     <div className="flex md:flex-col md:justify-right justify-between">
-                        <button
+                        {/* <button
                             onClick={() => handlePageChange("blog")}
                             className={`md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full ${
                                 currentPage === "blog" ? "bg-slate-700" : ""
@@ -116,20 +94,7 @@ function App() {
                                 className="w-8 h-8 mx-2 brightness-0 invert"
                             />
                             Blog
-                        </button>
-                        <button
-                            onClick={() => handlePageChange("food")}
-                            className={`md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full ${
-                                currentPage === "food" ? "bg-slate-700" : ""
-                            }`}
-                        >
-                            <img
-                                src="/hamburger-icon.svg"
-                                alt="burger"
-                                className="w-8 h-8 mx-2 brightness-0 invert"
-                            />
-                            Food
-                        </button>
+                        </button> */}
                         <button
                             onClick={() => handlePageChange("footage")}
                             className={`md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full ${
