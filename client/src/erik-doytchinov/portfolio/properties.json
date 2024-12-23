@@ -1,33 +1,34 @@
 {
     "experiences": [
         {
+            "title": "Junior Software Engineer",
+            "link": "https://www.zivver.com/",
+            "company": "Zivver",
+            "type": "Full-time",
+            "startDate": "Sept 2024",
+            "endDate": "Present",
+            "description": [
+                "CloudSync Design & Implementation: Architected and developed a Python-based synchronization solution—CloudSync—that automates account and permission management from Exchange Online into Zivver using the SCIM protocol. By integrating with Azure Automate, CloudSync requires no manual version management or dedicated servers.", 
+                "Scalable & Secure User Management: Enabled a secure, scalable, and cost-effective approach to user identity synchronization for Zivver clients up to 10,000 users, ensuring smooth onboarding, maintenance, and compliance through fully automated processes.",
+                "Backend Bug Fixing & Familiarity: Continued refining backend services by identifying and resolving defects, improving test coverage by 5%, and enhancing overall platform stability and reliability.",
+                "Team Collaboration & Mentorship: Onboarded and guided 3 interns, working closely with senior engineers to promote cross-skill development into frontend, knowledge sharing, and a culture of continuous learning within the team."
+            ]
+        },
+        {
             "title": "Software Engineer Intern",
             "link": "https://www.zivver.com/",
             "company": "Zivver",
             "type": "Internship",
             "startDate": "Mar 2024",
-            "endDate": "Present",
+            "endDate": "Sept 2024",
+            "totalTime": "7 months",
             "description": [
-                "Led the performance optimization of key software systems, focusing on enhancing both frontend and backend functionalities to boost overall efficiency.",
-                "Directed the design and implementation of user interface improvements, significantly elevating user experience across software platforms.",
-                "Engineered and implemented scripts and tools for real-time performance evaluation of critical operational rules in production environments.",
-                "Developed an internal analytical tool to monitor and analyze trigger events based on input data, enhancing strategic operational insights.",
-                "Collaborated with cross-functional team members to ensure seamless integration of performance improvements into existing systems."
+                "Expanded Scala E2E Tests: Enhanced and extended end-to-end test coverage for critical business rule functionality, ensuring higher reliability and maintaining strong quality standards in the Scala-based codebase.",
+                "Microservices Bug Fixing: Identified, analyzed, and resolved various issues within various Python-based microservices, improving system stability, performance, and overall user experience.",
+                "Scala Back-End Enhancements: Implemented new audit logging features in the Scala back-end services, contributing to better traceability, security, and  compliance efforts withing the Zivver customer base.",
+                "Deployment Procedure Improvements: Optimized and refined the Ansible-based deployment setup (the Polaris repository), streamlining release workflows, reducing operational friction, and enhancing deployment consistency across environments.",
+                "Collaborated with software engineers and QA engineers to develop and test application procedures for system efficiency."
             ] 
-        },
-        {
-            "title": "Service Associate",
-            "link": "https://sugo.nl/",
-            "company": "SUGO Pizza al Taglio",
-            "type": "Part-time",
-            "startDate": "Jan 2023",
-            "endDate": "Present",
-            "description": [
-                "Expertly prepared and cooked a wide range of Italian-style pizzas to perfection, ensuring consistency in taste and presentation.",
-                "Maintained a clean and organized kitchen, adhering to food safety and hygiene standards. Demonstrated proficiency in working with pizza ovens and other kitchen equipment.",
-                "Coordinated and supervised fellow staff members during shifts, ensuring smooth restaurant operations.",
-                "Fostered a collaborative and positive work environment, promoting teamwork and staff morale."
-            ]
         },
         {
             "title": "Software Engineer Intern",
@@ -45,18 +46,18 @@
             ]
         },
         {
-            "title": "Customer Service Assistant",
-            "link": "https://jackastors.com/",
-            "company": "Jack Astor's Bar and Grill",
+            "title": "Service Associate",
+            "link": "https://sugo.nl/",
+            "company": "SUGO Pizza al Taglio",
             "type": "Part-time",
-            "startDate": "Feb 2022",
-            "endDate": "Sep 2022",
-            "totalTime": "7 months",
+            "startDate": "Jan 2023",
+            "endDate": "Sept 2024",
+            "totalTime": "1 year 9 months",
             "description": [
-                "Skilled in delivering outstanding service by greeting and serving customers.",
-                "Strong customer service attitude, self-reliant, dependable, able to prioritize, and multitask.",
-                "Experience working as a leader and able to work well with others to accomplish a goal.",
-                "Experienced with handling of high volume of customers."
+                "Expertly prepared and cooked a wide range of Italian-style pizzas to perfection, ensuring consistency in taste and presentation.",
+                "Maintained a clean and organized kitchen, adhering to food safety and hygiene standards. Demonstrated proficiency in working with pizza ovens and other kitchen equipment.",
+                "Coordinated and supervised fellow staff members during shifts, ensuring smooth restaurant operations.",
+                "Fostered a collaborative and positive work environment, promoting teamwork and staff morale."
             ]
         }
     ]

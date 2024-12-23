@@ -42,7 +42,7 @@ function Portfolio() {
             <h1 className="text-2xl ml-6 pt-1 left-3 ">Experiences</h1>
             <p className="ml-6 pt-5 left-3  bg-gradient-to-tr:bg-slate-300">
                 [
-                <a href="/resume.pdf" className="text-slate-400">
+                <a href="" className="text-slate-400">
                     CV
                 </a>
                 ] / [
@@ -111,8 +111,24 @@ function Portfolio() {
                         bar.
                     </p>
                 </li>
-                <li className="list-item pt-1 pl-3"></li>
             </ul>
+            <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+            <ul className=" list-inside ml-3 pt-2">
+                <li className="list-item pt-1 pl-3">
+                    <a
+                        href="https://github.com/ErikDoytchinov/Downtube"
+                        className="text-slate-400"
+                    >
+                        Downtube
+                    </a>
+                    <p>
+                        - A Python server that allows users to download youtube
+                        videos. Utilizes the youtube-dl library to fetch video
+                        data.
+                    </p>
+                </li>
+            </ul>
+            <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
             <ul className=" list-inside ml-3 pt-2">
                 <li className="list-item pt-1 pl-3">
                     <a
@@ -127,7 +143,6 @@ function Portfolio() {
                         framework. Currently in development.
                     </p>
                 </li>
-                <li className="list-item pt-1 pl-3"></li>
             </ul>
         </div>
     );
