@@ -69,7 +69,7 @@ const Blog: React.FC = () => {
                     Select an article to read:
                 </div>
 
-                <div className="max-h-[calc(100vh-200px)] overflow-y-auto pr-2">
+                <div className="max-h-[calc(100vh-200px)]pr-2">
                     {blogPosts.map((post) => (
                         <div
                             key={post.file}
