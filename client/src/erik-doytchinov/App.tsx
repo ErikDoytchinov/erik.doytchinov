@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Portfolio from "./portfolio/Portfolio";
 import Blog from "./blog/Blog";
 import Footage from "./footage/Footage";
@@ -54,24 +54,31 @@ const NavButton = ({ onClick, label, icon: Icon, active }: NavButtonProps) => (
         }
       `}
     >
-        {/* inline SVG as a React component */}
-        <Icon className="w-6 h-6 mr-3 fill-current dark:" />
+        <Icon className="w-6 h-6 mr-3 fill-current" />
         {label}
     </button>
 );
 
 const App = () => {
     const [currentPage, setCurrentPage] = useState<Page>("portfolio");
-
-    // Dark mode state
     const [darkMode, setDarkMode] = useState(false);
+
+    useEffect(() => {
+        const storedDarkMode = localStorage.getItem("darkMode");
+        if (storedDarkMode) {
+            setDarkMode(JSON.parse(storedDarkMode));
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    }, [darkMode]);
 
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
     };
 
     return (
-        // Wrap the entire app in a container that toggles the "dark" class
         <div className={darkMode ? "dark" : ""}>
             <div className="flex flex-col md:flex-row min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
                 {/* Sidebar */}
@@ -100,7 +107,7 @@ const App = () => {
                                 key={item.id}
                                 onClick={() => setCurrentPage(item.id)}
                                 label={item.label}
-                                icon={item.icon} // pass the component, not a string
+                                icon={item.icon}
                                 active={currentPage === item.id}
                             />
                         ))}
@@ -140,7 +147,7 @@ const App = () => {
                             rel="noopener noreferrer"
                             className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                         >
-                            <InstagramIcon className="w-6 h-6 dark:text-gray-300" />
+                            <InstagramIcon className="w-6 h-6" />
                         </a>
                         <a
                             href="https://github.com/erikdoytchinov"
@@ -148,13 +155,13 @@ const App = () => {
                             rel="noopener noreferrer"
                             className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                         >
-                            <GitHubIcon className="w-6 h-6 dark:text-gray-300" />
+                            <GitHubIcon className="w-6 h-6" />
                         </a>
                         <a
                             href="mailto:erik.doytchinov@gmail.com"
                             className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                         >
-                            <MailIcon className="w-6 h-6 dark:text-gray-300" />
+                            <MailIcon className="w-6 h-6" />
                         </a>
                     </div>
                 </aside>
