@@ -1,151 +1,136 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import props from "./properties.json";
+const experiences = [
+    {
+        title: "Junior Software Engineer",
+        company: "Zivver",
+        type: "Full-time",
+        dates: "Sept 2024 - Present",
+        description: [
+            "Architected and developed a Python-based synchronization solution, CloudSync, integrating Exchange Online into Zivver using the SCIM protocol.",
+            "Enabled a scalable, cost-effective approach to user identity synchronization for up to 10,000 Zivver clients.",
+            "Refined backend services, improving test coverage by 5% and enhancing platform stability and reliability.",
+            "Onboarded and mentored 3 interns, fostering cross-skill development within the team.",
+        ],
+    },
+    {
+        title: "Software Engineer Intern",
+        company: "Zivver",
+        type: "Internship",
+        dates: "Mar 2024 - Sept 2024",
+        description: [
+            "Enhanced end-to-end test coverage for critical business rules in a Scala-based codebase.",
+            "Identified and resolved issues in various Python-based microservices, improving system stability and performance.",
+            "Implemented new auditing and logging features in Scala backend services.",
+            "Refined deployment processes using Ansible-based scripts, improving consistency across environments.",
+        ],
+    },
+    {
+        title: "Software Engineer Intern",
+        company: "DVBControl",
+        type: "Internship",
+        dates: "Aug 2023 - Oct 2023",
+        description: [
+            "Designed and implemented a web portal for DVB Control's broadcasting monitoring tool using Angular.",
+            "Collaborated on enhancing database storage and retrieval efficiency.",
+            "Implemented security measures to safeguard sensitive data.",
+        ],
+    },
+];
 
-function calculateTimeDifference(date1: string) {
-    const date: Date = new Date(date1);
-    const dateNow: Date = new Date();
-    const diffTime = Math.abs(dateNow.getTime() - date.getTime());
-    const diffMos = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
-    if (diffMos > 12) {
-        return (
-            " " +
-            Math.floor(diffMos / 12) +
-            " yrs" +
-            " " +
-            (diffMos % 12) +
-            " mos"
-        );
-    }
-    return " " + diffMos + " mos";
-}
+const projects = [
+    {
+        title: "Soluna",
+        description:
+            "A web-based weather application built with Angular and Node.js. Features include a 5-day forecast, current weather, and a search bar powered by OpenWeatherMap API.",
+        link: "https://github.com/ErikDoytchinov/Soluna",
+    },
+    {
+        title: "Downtube",
+        description:
+            "A Python server that allows users to download YouTube videos, leveraging the youtube-dl library.",
+        link: "https://github.com/ErikDoytchinov/Downtube",
+    },
+    {
+        title: "FlavorCraft",
+        description:
+            "A Minecraft modpack that adds new foods and recipes, built with the Forge modding framework. Currently in development.",
+        link: "https://github.com/ErikDoytchinov/flavor-craft",
+    },
+];
 
-function Portfolio() {
-    return (
-        <div className="flex-1 md:overflow-y-auto p-4 md:mt-0 md:ml-64 no-scrollbar text-erik.doytchinov-500 bg-erik.doytchinov-100">
-            <h1 className="text-2xl ml-6 pt-3">About Me</h1>
-            <p className="top-10 ml-6 pt-5 left-3 text-sm">
-                Currently pursuing my Bachelor&apos;s in Computer Science (
-                <a
-                    href="https://vu.nl/en/education/bachelor/computer-science"
-                    className="text-slate-400"
-                >
-                    VU Amsterdam
-                </a>
-                ). I&apos;m interested in everything tech related, with a focus
-                on software engineering and big data. Here I include all project
-                I&apos;ve tinkered with throughout the years, and others.
-                I&apos;m always looking for new opportunities to learn and grow
-                as a software engineer.
-            </p>
-            <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-            <h1 className="text-2xl ml-6 pt-1 left-3 ">Experiences</h1>
-            <p className="ml-6 pt-5 left-3  bg-gradient-to-tr:bg-slate-300">
-                [
-                <a href="" className="text-slate-400">
-                    CV
-                </a>
-                ] / [
-                <a
-                    href="https://www.linkedin.com/in/erik-doytchinov-6a8ba8251/"
-                    className="text-slate-400"
-                >
-                    LinkedIn
-                </a>
-                ]
-            </p>
-            <ul className=" list-inside ml-3 pt-2">
-                {props.experiences.map((exp: any) => (
-                    <li
-                        key={exp.company}
-                        className="flex md:flex-row flex-col p-3 mb-3 bg-erik.doytchinov-200 rounded-md"
+const Portfolio = () => (
+    <>
+        {/* Outer container with responsive padding */}
+        <div className="max-w-4xl mx-auto p-4 sm:p-8">
+            {/* About Me Section */}
+            <section className="mb-8 sm:mb-12">
+                <h1 className="text-2xl sm:text-4xl font-bold mb-4">
+                    About Me
+                </h1>
+                <p className="text-base sm:text-lg leading-relaxed text-gray-700">
+                    I’m pursuing my Bachelor’s in Computer Science at VU
+                    Amsterdam. Passionate about software engineering and big
+                    data, I strive to build scalable, efficient solutions. This
+                    portfolio highlights my professional experiences, academic
+                    projects, and personal endeavors in the tech world.
+                </p>
+            </section>
+
+            {/* Experiences Section */}
+            <section className="mb-8 sm:mb-12">
+                <h2 className="text-xl sm:text-3xl font-semibold mb-4 sm:mb-6">
+                    Experiences
+                </h2>
+                {experiences.map((exp, index) => (
+                    <div
+                        key={index}
+                        className="mb-4 sm:mb-6 p-4 sm:p-6 bg-white shadow rounded-md"
                     >
-                        <div className="inline text-xs md:min-w-40">
-                            <p>
-                                {exp.startDate} - {exp.endDate}
-                                <br className="hidden md:block" />
-                                <span className="md:hidden"> | </span>
-                                {exp.endDate !== "Present"
-                                    ? exp.totalTime
-                                    : calculateTimeDifference(exp.startDate)}
-                            </p>
-                        </div>
-                        <div className="inline">
-                            <p className="text-base">{exp.title}</p>
-                            <p className="text-sm">
-                                <a href={exp.link} className="text-slate-400">
-                                    {exp.company}
-                                </a>
-                                · {exp.type}
-                            </p>
-                            <ul className="pl-4 pt-1 text-xs">
-                                {exp.description.map((desc: any) => (
-                                    <li key={desc}>
-                                        <p>• {desc}</p>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </li>
+                        <h3 className="text-lg sm:text-2xl font-bold">
+                            {exp.title}
+                        </h3>
+                        <p className="text-gray-500 text-sm">
+                            {exp.company} · {exp.type} · {exp.dates}
+                        </p>
+                        <ul className="list-disc list-inside mt-2 sm:mt-4 text-gray-700">
+                            {exp.description.map((desc, i) => (
+                                <li
+                                    key={i}
+                                    className="mb-2 text-sm sm:text-base"
+                                >
+                                    {desc}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 ))}
-            </ul>
-            <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-            <h1 className="text-2xl ml-6 pt-1 left-3 ">Projects</h1>
-            <p className="ml-6 pt-5 left-3  bg-gradient-to-tr:bg-slate-300 text-sm">
-                Some projects I&apos;ve worked on throughout the years listed
-                bellow.
-            </p>
-            <ul className=" list-inside ml-3 pt-2">
-                <li className="list-item pt-1 pl-3">
-                    <a
-                        href="https://github.com/ErikDoytchinov/Soluna"
-                        className="text-slate-400"
+            </section>
+
+            {/* Projects Section */}
+            <section>
+                <h2 className="text-xl sm:text-3xl font-semibold mb-4 sm:mb-6">
+                    Projects
+                </h2>
+                {projects.map((project, index) => (
+                    <div
+                        key={index}
+                        className="mb-4 sm:mb-6 p-4 sm:p-6 bg-white shadow rounded-md"
                     >
-                        Soluna
-                    </a>
-                    <p>
-                        - Web based weather application built with Angular
-                        framework and ran on a NodeJs servers. Utilizes the
-                        OpenWeatherMap API to fetch weather data. Features
-                        include: 5-day forecast, current weather, and a search
-                        bar.
-                    </p>
-                </li>
-            </ul>
-            <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-            <ul className=" list-inside ml-3 pt-2">
-                <li className="list-item pt-1 pl-3">
-                    <a
-                        href="https://github.com/ErikDoytchinov/Downtube"
-                        className="text-slate-400"
-                    >
-                        Downtube
-                    </a>
-                    <p>
-                        - A Python server that allows users to download youtube
-                        videos. Utilizes the youtube-dl library to fetch video
-                        data.
-                    </p>
-                </li>
-            </ul>
-            <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-            <ul className=" list-inside ml-3 pt-2">
-                <li className="list-item pt-1 pl-3">
-                    <a
-                        href="https://github.com/ErikDoytchinov/flavor-craft"
-                        className="text-slate-400"
-                    >
-                        FlavorCraft
-                    </a>
-                    <p>
-                        - A minecraft modpack that adds a variety of new foods
-                        and recipes to the game. Built with the forge modding
-                        framework. Currently in development.
-                    </p>
-                </li>
-            </ul>
+                        <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-lg sm:text-2xl font-bold text-blue-600 hover:underline"
+                        >
+                            {project.title}
+                        </a>
+                        <p className="mt-2 text-sm sm:text-base text-gray-700">
+                            {project.description}
+                        </p>
+                    </div>
+                ))}
+            </section>
         </div>
-    );
-}
+    </>
+);
 
 export default Portfolio;

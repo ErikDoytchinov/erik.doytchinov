@@ -1,119 +1,142 @@
+import React, { useState } from "react";
+import Portfolio from "./portfolio/Portfolio";
+import Footage from "./footage/Footage";
 import "./App.css";
-import Portfolio from "./portfolio/Portfolio.tsx";
-import Blog from "./blog/Blog.tsx";
-import Food from "./food/Food.tsx";
-import Footage from "./footage/Footage.tsx";
-import { useState } from "react";
 
-type Page = "portfolio" | "blog" | "food" | "footage";
+// 1. Define our Page type
+type Page = "portfolio" | "footage";
 
-function App() {
+// 2. Create an array for dynamic nav items
+const navItems = [
+    {
+        id: "portfolio" as Page,
+        label: "Portfolio",
+        icon: "/portfolio-icon.svg",
+    },
+    {
+        id: "footage" as Page,
+        label: "Drone Footage",
+        icon: "/video-camera-icon.svg",
+    },
+];
+
+// 3. Map each Page to its component
+const pagesMap: Record<Page, React.ReactNode> = {
+    portfolio: <Portfolio />,
+    footage: <Footage />,
+};
+
+// Navigation Button Component
+const NavButton = ({
+    onClick,
+    label,
+    icon,
+    active,
+}: {
+    onClick: () => void;
+    label: string;
+    icon: string;
+    active: boolean;
+}) => (
+    <button
+        onClick={onClick}
+        className={`w-full flex items-center px-4 py-2 my-2 rounded-md text-lg transition-colors
+      ${
+          active
+              ? "bg-blue-600 text-white"
+              : "hover:bg-blue-100 text-gray-700 hover:text-blue-600"
+      }`}
+    >
+        <img src={icon} alt={`${label} icon`} className="w-6 h-6 mr-3" />
+        {label}
+    </button>
+);
+
+const App = () => {
+    // 4. Manage which page is active
     const [currentPage, setCurrentPage] = useState<Page>("portfolio");
 
-    const handlePageChange = (page: Page) => {
-        if (currentPage === page) setCurrentPage("portfolio");
-        else setCurrentPage(page);
-    };
-
-    const renderContent = () => {
-        switch (currentPage) {
-            case "portfolio":
-                return <Portfolio />;
-            case "blog":
-                return <Blog />;
-            case "food":
-                return <Food />;
-            case "footage":
-                return <Footage />;
-            default:
-                return <Portfolio />;
-        }
-    };
-
     return (
-        <>
-            <div className="h-screen flex flex-col md:flex-row no-scrollbar overflow-y-scroll">
-                <aside className="md:w-64 w-full p-4 md:h-full md:fixed md:left-0 md:top-0 text-erik.doytchinov-500 bg-erik.doytchinov-200">
+        // Let the container be flexible in height; make it a row layout on md+ screens
+        <div className="flex flex-col md:flex-row min-h-screen bg-gray-50 text-gray-900">
+            {/* Sidebar */}
+            <aside className="flex flex-col w-full md:w-64 bg-white shadow-lg px-6 py-8 md:h-screen md:sticky md:top-0">
+                {/* Profile Section */}
+                <div className="text-center">
                     <img
                         src="https://media.licdn.com/dms/image/v2/D4E03AQGKkYD_g2UwYw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1705500073136?e=1740614400&v=beta&t=7NysDc8FUbs8_Jj-UsuhrrYPECGgc8kpq-q7Mo6Jnz4"
-                        alt="Picture of the me"
-                        className="rounded-full md:w-auto  hidden md:block"
+                        alt="Profile"
+                        className="rounded-full w-32 h-32 mx-auto mb-4 shadow-md"
                     />
-                    <h1
-                        onClick={() => handlePageChange("portfolio")}
-                        className="text-center text-2xl pt-2 pb-5"
+                    <h1 className="text-2xl font-bold mb-2">Erik Doytchinov</h1>
+                    <p className="text-gray-500 text-sm">
+                        Junior Software Engineer
+                    </p>
+                </div>
+
+                <hr className="my-6 border-gray-200" />
+
+                {/* Navigation Section */}
+                <nav className="flex-grow">
+                    {navItems.map((item) => (
+                        <NavButton
+                            key={item.id}
+                            onClick={() => setCurrentPage(item.id)}
+                            label={item.label}
+                            icon={item.icon}
+                            active={currentPage === item.id}
+                        />
+                    ))}
+                </nav>
+
+                <hr className="my-6 border-gray-200" />
+
+                {/* Social Links */}
+                <div className="flex justify-evenly">
+                    <a
+                        href="https://www.instagram.com/erik_doytchinov/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800"
                     >
-                        Erik Doytchinov
-                    </h1>
-                    <div className="flex justify-evenly md:mt-7">
-                        <a
-                            href="https://www.instagram.com/erik_doytchinov/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                src="/instagram-icon.svg"
-                                alt="instagram"
-                                className="w-6 h-6 md:w-8 md:h-8 mx-2 brightness-0 invert"
-                            />
-                        </a>
-                        <a
-                            href="https://www.github.com/erikdoytchinov"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                src="/github-icon.svg"
-                                alt="github"
-                                className="w-6 h-6 md:w-8 md:h-8 mx-2 brightness-0 invert"
-                            />
-                        </a>
-                        <a
-                            href="mailto:erik.doytchinov@gmail.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                src="/mail-icon.svg"
-                                alt="linkedin"
-                                className="w-6 h-6 md:w-8 md:h-8 mx-2 brightness-0 invert"
-                            />
-                        </a>
-                    </div>
-                    <hr className="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-                    <div className="flex md:flex-col md:justify-right justify-between">
-                        {/* <button
-                            onClick={() => handlePageChange("blog")}
-                            className={`md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full ${
-                                currentPage === "blog" ? "bg-slate-700" : ""
-                            }`}
-                        >
-                            <img
-                                src="/notebook-icon.svg"
-                                alt="blog"
-                                className="w-8 h-8 mx-2 brightness-0 invert"
-                            />
-                            Blog
-                        </button> */}
-                        <button
-                            onClick={() => handlePageChange("footage")}
-                            className={`md:py-2 md:my-1 text-sm flex justify-center md:justify-normal items-center rounded-lg hover:bg-slate-700 w-full ${
-                                currentPage === "footage" ? "bg-slate-700" : ""
-                            }`}
-                        >
-                            <img
-                                src="/video-camera-icon.svg"
-                                alt="camera"
-                                className="w-8 h-8 mx-2 brightness-0 invert"
-                            />
-                            Footage
-                        </button>
-                    </div>
-                </aside>
-                {renderContent()}
-            </div>
-        </>
+                        <img
+                            src="/instagram-icon.svg"
+                            alt="Instagram"
+                            className="w-6 h-6"
+                        />
+                    </a>
+                    <a
+                        href="https://github.com/erikdoytchinov"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-gray-900"
+                    >
+                        <img
+                            src="/github-icon.svg"
+                            alt="GitHub"
+                            className="w-6 h-6"
+                        />
+                    </a>
+                    <a
+                        href="mailto:erik.doytchinov@gmail.com"
+                        className="text-gray-600 hover:text-gray-900"
+                    >
+                        <img
+                            src="/mail-icon.svg"
+                            alt="Email"
+                            className="w-6 h-6"
+                        />
+                    </a>
+                </div>
+            </aside>
+
+            {/* Main Content */}
+            <main className="flex-1 p-8 overflow-y-auto">
+                {/* 5. Render the active page dynamically */}
+                {pagesMap[currentPage]}
+            </main>
+        </div>
     );
-}
+};
 
 export default App;
