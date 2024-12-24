@@ -1,1 +1,41 @@
-<?xml version="1.0" ?><svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="256" width="256"/><circle cx="128" cy="128" fill="none" r="40" stroke="#000" stroke-miterlimit="10" stroke-width="16"/><rect fill="none" height="184" rx="48" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" width="184" x="36" y="36"/><circle cx="180" cy="76" r="12"/></svg>
+<svg
+  viewBox="0 0 256 256"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Keep an empty <rect> just for spacing if needed -->
+  <rect fill="none" height="256" width="256"/>
+
+  <!-- The camera lens circle -->
+  <circle
+    cx="128"
+    cy="128"
+    r="40"
+    fill="none"
+    stroke="currentColor"
+    stroke-miterlimit="10"
+    stroke-width="16"
+  />
+
+  <!-- The main rounded square body -->
+  <rect
+    x="36"
+    y="36"
+    width="184"
+    height="184"
+    rx="48"
+    fill="none"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="16"
+  />
+
+  <!-- The small circle in the top-right corner;
+       previously default-filled black, now fill currentColor -->
+  <circle
+    cx="180"
+    cy="76"
+    r="12"
+    fill="currentColor"
+  />
+</svg>

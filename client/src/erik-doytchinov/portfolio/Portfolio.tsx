@@ -66,7 +66,7 @@ const Portfolio = () => (
                 <h1 className="text-2xl sm:text-4xl font-bold mb-4">
                     About Me
                 </h1>
-                <p className="text-base sm:text-lg leading-relaxed text-gray-700">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                     I’m pursuing my Bachelor’s in Computer Science at VU
                     Amsterdam. Passionate about software engineering and big
                     data, I strive to build scalable, efficient solutions. This
@@ -83,15 +83,15 @@ const Portfolio = () => (
                 {experiences.map((exp, index) => (
                     <div
                         key={index}
-                        className="mb-4 sm:mb-6 p-4 sm:p-6 bg-white shadow rounded-md"
+                        className="mb-4 sm:mb-6 p-4 sm:p-6 bg-white dark:bg-gray-800 shadow rounded-md"
                     >
                         <h3 className="text-lg sm:text-2xl font-bold">
                             {exp.title}
                         </h3>
-                        <p className="text-gray-500 text-sm">
+                        <p className="text-gray-500 dark:text-gray-300 text-sm">
                             {exp.company} · {exp.type} · {exp.dates}
                         </p>
-                        <ul className="list-disc list-inside mt-2 sm:mt-4 text-gray-700">
+                        <ul className="list-disc list-inside mt-2 sm:mt-4 text-gray-700 dark:text-gray-200">
                             {exp.description.map((desc, i) => (
                                 <li
                                     key={i}
@@ -113,17 +113,17 @@ const Portfolio = () => (
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="mb-4 sm:mb-6 p-4 sm:p-6 bg-white shadow rounded-md"
+                        className="mb-4 sm:mb-6 p-4 sm:p-6 bg-white dark:bg-gray-800 shadow rounded-md"
                     >
                         <a
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-lg sm:text-2xl font-bold text-blue-600 hover:underline"
+                            className="text-lg sm:text-2xl font-bold text-blue-600 dark:text-blue-400 hover:underline"
                         >
                             {project.title}
                         </a>
-                        <p className="mt-2 text-sm sm:text-base text-gray-700">
+                        <p className="mt-2 text-sm sm:text-base text-gray-700 dark:text-gray-200">
                             {project.description}
                         </p>
                     </div>

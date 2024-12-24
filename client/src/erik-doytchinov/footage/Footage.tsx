@@ -87,8 +87,6 @@ const mediaItemsRow2: MediaItem[] = [
 const allMediaItems = [...mediaItemsRow1, ...mediaItemsRow2];
 
 function MediaItemComponent({ type, src, alt, date }: MediaItem) {
-    // Minimal classes to let items fill container
-    // You can keep object-cover or aspect classes if you want, but they may affect the “stagger” look
     const commonClasses = "w-full object-cover";
 
     if (type === "photo") {
@@ -96,15 +94,13 @@ function MediaItemComponent({ type, src, alt, date }: MediaItem) {
             <div className="relative">
                 <img src={src} alt={alt || ""} className={commonClasses} />
                 {date && (
-                    <div className="absolute top-1 right-1 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded shadow">
+                    <div className="absolute top-1 right-1 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs font-semibold px-2 py-1 rounded shadow">
                         {date}
                     </div>
                 )}
             </div>
         );
     } else if (type === "video") {
-        // If you want to strictly preserve aspect ratio for videos, you could wrap them
-        // in an .aspect-w-16 aspect-h-9 container, but that can reduce the “staggered” effect.
         return (
             <div className="relative">
                 <video controls preload="metadata" className={commonClasses}>
@@ -112,7 +108,7 @@ function MediaItemComponent({ type, src, alt, date }: MediaItem) {
                     Your browser does not support the video tag.
                 </video>
                 {date && (
-                    <div className="absolute top-1 right-1 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded shadow">
+                    <div className="absolute top-1 right-1 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs font-semibold px-2 py-1 rounded shadow">
                         {date}
                     </div>
                 )}
@@ -124,20 +120,17 @@ function MediaItemComponent({ type, src, alt, date }: MediaItem) {
 
 function Footage() {
     return (
-        <div className="flex flex-col items-center min-h-screen bg-gray-50 text-gray-900 p-8">
+        <div className="flex flex-col items-center min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-8 transition-colors duration-300">
             <header className="mb-8 text-center">
                 <h1 className="text-4xl font-bold mb-2">Drone Footage</h1>
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-gray-600 dark:text-gray-300">
                     Here are some photos and videos I took with my DJI Mini 3
                     around the Netherlands. Enjoy!
                 </p>
             </header>
 
-            {/* Masonry-like columns: 1 column on smaller screens, 2 on md+, with a 4px gap between columns */}
             <div className="columns-1 md:columns-2 gap-4 w-full max-w-5xl">
                 {allMediaItems.map((item, index) => (
-                    // Wrap each item in a div with margin-bottom and break-inside-avoid
-                    // so they don't get split between columns
                     <div key={index} className="mb-4 break-inside-avoid">
                         <MediaItemComponent {...item} />
                     </div>
