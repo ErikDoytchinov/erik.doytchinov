@@ -1,20 +1,27 @@
 import React, { useState } from "react";
 import Portfolio from "./portfolio/Portfolio";
+import Blog from "./blog/Blog";
 import Footage from "./footage/Footage";
-import { ReactComponent as PortfolioIcon } from "/public/portfolio-icon.svg";
-import { ReactComponent as VideoCameraIcon } from "/public/video-camera-icon.svg";
-import { ReactComponent as InstagramIcon } from "/public/instagram-icon.svg";
-import { ReactComponent as GitHubIcon } from "/public/github-icon.svg";
-import { ReactComponent as MailIcon } from "/public/mail-icon.svg";
+import { ReactComponent as PortfolioIcon } from "/src/assets/portfolio-icon.svg";
+import { ReactComponent as VideoCameraIcon } from "/src/assets/video-camera-icon.svg";
+import { ReactComponent as NotebookIcon } from "/src/assets/notebook-icon.svg";
+import { ReactComponent as InstagramIcon } from "/src/assets/instagram-icon.svg";
+import { ReactComponent as GitHubIcon } from "/src/assets/github-icon.svg";
+import { ReactComponent as MailIcon } from "/src/assets/mail-icon.svg";
 import "./App.css";
 
-type Page = "portfolio" | "footage";
+type Page = "portfolio" | "blog" | "footage";
 
 const navItems = [
     {
         id: "portfolio" as Page,
         label: "Portfolio",
         icon: PortfolioIcon,
+    },
+    {
+        id: "blog" as Page,
+        label: "Blog",
+        icon: NotebookIcon,
     },
     {
         id: "footage" as Page,
@@ -25,6 +32,7 @@ const navItems = [
 
 const pagesMap: Record<Page, React.ReactNode> = {
     portfolio: <Portfolio />,
+    blog: <Blog />,
     footage: <Footage />,
 };
 
