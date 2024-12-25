@@ -60,7 +60,7 @@ const projects = [
 const Portfolio = () => (
     <>
         {/* Outer container with responsive padding */}
-        <div className="max-w-4xl mx-auto p-4 sm:p-8">
+        <div className="max-w-4xl mx-auto sm:p-8">
             {/* About Me Section */}
             <section className="mb-8 sm:mb-12">
                 <h1 className="text-2xl sm:text-4xl font-bold mb-4">

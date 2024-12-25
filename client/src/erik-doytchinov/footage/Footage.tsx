@@ -120,8 +120,8 @@ function MediaItemComponent({ type, src, alt, date }: MediaItem) {
 
 function Footage() {
     return (
-        <div className="flex flex-col items-center min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 sm:p-8 transition-colors duration-300">
-            <header className="mb-8 text-center">
+        <div className="max-w-4xl mx-auto sm:p-8">
+            <header className="mb-8">
                 <h1 className="text-4xl font-bold mb-2">Drone Footage</h1>
                 <p className="text-lg text-gray-600 dark:text-gray-300">
                     Here are some photos and videos I took with my DJI Mini 3
