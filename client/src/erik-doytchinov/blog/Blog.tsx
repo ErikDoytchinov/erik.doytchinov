@@ -73,23 +73,26 @@ const Blog: React.FC = () => {
                     {blogPosts.map((post) => (
                         <div
                             key={post.file}
-                            className="mb-4 p-4 bg-white dark:bg-gray-800 rounded-md shadow hover:shadow-md transition-shadow flex"
+                            className="mb-4 p-4 bg-white dark:bg-gray-800 rounded-md shadow hover:shadow-md transition-shadow 
+                                   flex flex-col sm:flex-row"
                         >
                             {/* Thumbnail Image */}
                             <img
                                 src={post.image}
                                 alt={post.title}
-                                className="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded mr-4"
+                                className="w-full sm:w-24 h-auto object-cover rounded mb-2 sm:mr-4"
                             />
 
                             {/* Text Content */}
                             <div className="flex flex-col justify-center">
-                                <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                                <h2 className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-200">
                                     {post.title}
                                 </h2>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+
+                                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">
                                     {post.excerpt}
                                 </p>
+
                                 <button
                                     onClick={() => setSelectedFile(post.file)}
                                     className="text-blue-600 dark:text-blue-400 hover:underline mt-2 self-start"
@@ -117,11 +120,6 @@ const Blog: React.FC = () => {
                 &larr; Back to Articles
             </button>
 
-            {/* 
-        Use Tailwind's `prose` for better default typography, 
-        `max-w-full` to ensure it doesn't exceed screen width, 
-        and `overflow-x-auto` for horizontal scroll if needed 
-      */}
             <div className="prose dark:prose-invert max-w-full overflow-x-auto">
                 <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
