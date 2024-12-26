@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class',
@@ -21,6 +23,24 @@ export default {
   plugins: [
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+          /* Utility for hiding scrollbars (WebKit browsers) */
+          ".no-scrollbar": {
+              "-ms-overflow-style": "none", // IE and Edge
+              "scrollbar-width": "none", // Firefox
+          },
+          ".no-scrollbar::-webkit-scrollbar": {
+              display: "none", // WebKit browsers
+          },
+          /* Utility to disable overscroll behavior */
+          ".no-overscroll": {
+              "overscroll-behavior": "none",
+          },
+      };
+
+      addUtilities(newUtilities);
+  }),
   ],
 }
 

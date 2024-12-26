@@ -80,7 +80,7 @@ const App = () => {
 
     return (
         <div className={darkMode ? "dark" : ""}>
-            <div className="flex flex-col md:flex-row min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+            <div className="flex flex-col md:flex-row min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 no-overscroll">
                 {/* Sidebar */}
                 <aside className="flex flex-col w-full md:w-64 bg-white dark:bg-gray-800 shadow-lg px-6 py-8 md:h-screen md:sticky md:top-0 transition-colors duration-300">
                     {/* Profile Section */}
@@ -167,7 +167,7 @@ const App = () => {
                 </aside>
 
                 {/* Main Content */}
-                <main className="flex-1 p-8 overflow-y-auto">
+                <main className="flex-1 p-8 no-overscroll">
                     {pagesMap[currentPage]}
                 </main>
             </div>
