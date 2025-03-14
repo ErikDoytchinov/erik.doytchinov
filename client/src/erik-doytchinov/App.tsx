@@ -86,7 +86,7 @@ const App = () => {
                     {/* Profile Section */}
                     <div className="text-center">
                         <img
-                            src="https://media.licdn.com/dms/image/v2/D4E03AQGKkYD_g2UwYw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1705500073136?e=1740614400&v=beta&t=7NysDc8FUbs8_Jj-UsuhrrYPECGgc8kpq-q7Mo6Jnz4"
+                            src="https://avatars.githubusercontent.com/u/83290221?s=400&u=94a0f170f79273172b1b67e17aba39ce7483da60&v=4"
                             alt="Profile"
                             className="rounded-full w-32 h-32 mx-auto mb-4 shadow-md"
                         />
