@@ -50,7 +50,7 @@ const NavButton = ({ onClick, label, icon: Icon, active }: NavButtonProps) => (
         ${
             active
                 ? "bg-blue-600 text-white"
-                : "hover:bg-blue-100 text-gray-700 hover:text-blue-600 dark:hover:bg-gray-800 dark:hover:text-blue-300"
+                : "hover:bg-blue-100 text-gray-700 hover:text-blue-600 dark:hover:bg-gray-800 dark:text-gray-50 dark:hover:text-blue-300"
         }
       `}
     >
